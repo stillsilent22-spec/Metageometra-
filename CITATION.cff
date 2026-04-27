@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it using the metadata below."
+title: "Metageometra"
+authors:
+  - family-names: "Hannemann"
+    given-names: "Kegin"
+repository-code: "https://github.com/stillsilent22-spec/Metageometra-"
+abstract: >
+  Metageometra is a framework by Kegin Hannemann. Versioned releases of the
+  Metageometra PDF are published on GitHub Releases and archived on Zenodo
+  for persistent DOI assignment.
+# TODO: Add the Zenodo DOI here once the first release is archived by Zenodo.
+# doi: "10.XXXX/zenodo.XXXXXXX"
+# TODO: Update the version and date-released fields with each new release.
+# version: "18.0.0"
+# date-released: "YYYY-MM-DD"

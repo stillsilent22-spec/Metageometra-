@@ -1,0 +1,12 @@
+{
+  "title": "Metageometra",
+  "upload_type": "publication",
+  "publication_type": "other",
+  "creators": [
+    {
+      "name": "Hannemann, Kegin"
+    }
+  ],
+  "description": "This repository contains the Metageometra PDF and its versioned releases. Each release corresponds to a specific published version of the Metageometra framework by Kegin Hannemann.",
+  "access_right": "open"
+}
