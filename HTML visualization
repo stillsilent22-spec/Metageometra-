@@ -1,1 +1,525 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M_meta · 4-Arm Helix</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Crimson+Pro:ital,wght@0,300;1,300&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#03050e; color:#b8d4f0; font-family:'Share Tech Mono',monospace; min-height:100vh; }
 
+  header { padding:1.5rem 2rem 0.5rem; border-bottom:1px solid rgba(100,180,255,0.12); }
+  h1 { font-family:'Crimson Pro',serif; font-weight:300; font-size:1.6rem; letter-spacing:0.3em; color:#a0d0ff; }
+  .sub { font-size:0.6rem; color:rgba(160,200,255,0.4); letter-spacing:0.15em; margin-top:0.3rem; }
+
+  .main { display:grid; grid-template-columns:1fr 340px; gap:1rem; padding:1rem; }
+
+  .canvas-wrap {
+    background:rgba(8,12,30,0.9);
+    border:1px solid rgba(100,180,255,0.1);
+    border-radius:2px;
+    padding:0.75rem;
+    position:relative;
+  }
+  .view-label { font-size:0.58rem; letter-spacing:0.18em; color:rgba(160,200,255,0.4); margin-bottom:0.5rem; }
+  canvas { width:100%; display:block; cursor:crosshair; }
+
+  .sidebar { display:flex; flex-direction:column; gap:0.75rem; overflow-y:auto; max-height:90vh; }
+
+  .panel {
+    background:rgba(8,12,30,0.9);
+    border:1px solid rgba(100,180,255,0.1);
+    border-radius:2px;
+    padding:0.75rem;
+  }
+  .panel-title { font-size:0.58rem; letter-spacing:0.2em; color:rgba(160,200,255,0.45); margin-bottom:0.6rem; border-bottom:1px solid rgba(100,180,255,0.08); padding-bottom:0.4rem; }
+
+  .arm-section { margin-bottom:0.6rem; }
+  .arm-label { font-size:0.6rem; padding:0.2rem 0.4rem; margin-bottom:0.3rem; border-radius:1px; }
+
+  .obj-row { font-size:0.56rem; padding:0.2rem 0.4rem; display:grid; grid-template-columns:1fr auto auto; gap:0.4rem; border-bottom:1px solid rgba(100,180,255,0.04); }
+  .confirmed { color:#00ffaa; }
+  .candidate { color:#ffcc00; }
+  .predicted { color:#ff6688; }
+
+  .badge { font-size:0.48rem; padding:1px 3px; border-radius:1px; }
+  .b-conf { background:rgba(0,255,170,0.12); color:#00ffaa; }
+  .b-cand { background:rgba(255,204,0,0.12); color:#ffcc00; }
+  .b-pred { background:rgba(255,102,136,0.12); color:#ff6688; }
+
+  .stats { font-size:0.58rem; line-height:1.9; color:rgba(160,200,255,0.5); }
+  .stats span { color:#a0d0ff; }
+
+  .legend { display:flex; flex-wrap:wrap; gap:0.6rem; font-size:0.55rem; }
+  .li { display:flex; align-items:center; gap:0.4rem; }
+  .dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+
+  .formula { padding:0.5rem 2rem; font-size:0.57rem; color:rgba(160,200,255,0.28); border-top:1px solid rgba(100,180,255,0.08); }
+
+  .tooltip {
+    position:absolute; background:rgba(4,6,20,0.96); border:1px solid rgba(100,180,255,0.3);
+    padding:0.5rem 0.75rem; font-size:0.57rem; pointer-events:none; display:none;
+    border-radius:2px; z-index:10; max-width:230px; line-height:1.7;
+  }
+
+  .controls { padding:0.5rem 1rem; display:flex; gap:1rem; font-size:0.58rem; align-items:center; border-bottom:1px solid rgba(100,180,255,0.08); }
+  .controls label { color:rgba(160,200,255,0.5); }
+  input[type=range] { width:80px; accent-color:#64b4ff; }
+  .val { color:#a0d0ff; min-width:30px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>M_meta · 4-Arm Helix · OT-41</h1>
+  <div class="sub">Sigma_meta Zentrum · 4 Arme (2 original + 2 gespiegelt) · Neigungswinkel variabel · Partnershell-Vorhersagen</div>
+</header>
+
+<div class="controls">
+  <label>Neigung Arm 1/2:</label>
+  <input type="range" id="tilt12" min="0" max="30" value="8" step="0.5">
+  <span class="val" id="tilt12val">8°</span>
+  <label>Neigung Arm 3/4:</label>
+  <input type="range" id="tilt34" min="0" max="30" value="8" step="0.5">
+  <span class="val" id="tilt34val">8°</span>
+  <label>Rotation:</label>
+  <input type="range" id="baserot" min="0" max="90" value="15" step="1">
+  <span class="val" id="baserotval">15°</span>
+</div>
+
+<div class="main">
+  <div class="canvas-wrap">
+    <div class="view-label">DRAUFSICHT · Sigma_meta Zentrum · 4-Arm Helix · Shell-Anker + Vorhersagen</div>
+    <canvas id="c" width="820" height="820"></canvas>
+    <div class="tooltip" id="tip"></div>
+  </div>
+
+  <div class="sidebar">
+    <div class="panel">
+      <div class="panel-title">ARM-ZUORDNUNG</div>
+      <div id="armList"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">STATISTIK</div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">NEUE VORHERSAGEN · OT-41</div>
+      <div id="predictions"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">LEGENDE</div>
+      <div class="legend">
+        <div class="li"><div class="dot" style="background:#00ffaa"></div>Confirmed</div>
+        <div class="li"><div class="dot" style="background:#ffcc00"></div>Kandidat</div>
+        <div class="li"><div class="dot" style="background:#ff6688"></div>Predicted</div>
+        <div class="li"><div class="dot" style="background:#7744ff"></div>Arm 1 (r-oben)</div>
+        <div class="li"><div class="dot" style="background:#44aaff"></div>Arm 2 (r-unten)</div>
+        <div class="li"><div class="dot" style="background:#ff7744"></div>Arm 3 (l-oben)</div>
+        <div class="li"><div class="dot" style="background:#ff44aa"></div>Arm 4 (l-unten)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="formula">
+  4-Arm: φ_arm = baseRot + [0°, tilt, 180°, 180°+tilt] · Shell θ_n = arccos(cos(n·1°)·cos(n·59.1°)) · Partner = φ_arm + 180° · ρ=0.406
+</div>
+
+<script>
+const RHO = 0.406;
+const CHI_DEG = 59.1;
+const DPOL = { l:305, b:25 };
+
+function shellTheta(n) {
+  const d = Math.PI/180, c = CHI_DEG*Math.PI/180;
+  return Math.acos(Math.cos(n*d)*Math.cos(n*c))*180/Math.PI;
+}
+
+const SHELLS = [];
+for (let n=1; n<=8; n++) SHELLS.push({ n, theta:shellTheta(n), bwd:n>=4 });
+
+// SMBH Katalog mit galaktischen Koordinaten
+const CATALOG = [
+  { name:"Sgr A*",     l:359.9, b:-0.1,  shellN:1, status:"confirmed", spin:"A", dist:0.000026 },
+  { name:"NGC 1052",   l:200.8, b:-55.4, shellN:2, status:"confirmed", spin:"B", dist:19.4 },
+  { name:"NGC 0315",   l:123.4, b:-32.5, shellN:3, status:"confirmed", spin:"A", dist:70.3 },
+  { name:"Cen A",      l:309.5, b:19.4,  shellN:6, status:"candidate", spin:"B", dist:3.8 },
+  { name:"NGC 2273",   l:164.3, b:24.1,  shellN:4, status:"candidate", spin:"B", dist:28.5 },
+  { name:"NGC 6251",   l:98.3,  b:28.1,  shellN:4, status:"candidate", spin:"B", dist:104 },
+  { name:"NGC 1600",   l:210.5, b:-36.2, shellN:2, status:"candidate", spin:"B", dist:64 },
+  { name:"NGC 4889",   l:280.1, b:83.9,  shellN:5, status:"candidate", spin:"A", dist:102 },
+  { name:"NGC 3227",   l:235.5, b:50.0,  shellN:5, status:"candidate", spin:"A", dist:20.6 },
+  { name:"M31",        l:121.2, b:-21.6, shellN:3, status:"candidate", spin:"A", dist:0.785 },
+  { name:"NGC 3338",   l:105.4, b:34.9,  shellN:2, status:"predicted", spin:"B", dist:74 },
+  { name:"NGC 3370",   l:117.7, b:37.3,  shellN:2, status:"predicted", spin:"B", dist:82 },
+  { name:"K1-1",       l:282.0, b:-29.3, shellN:5, status:"predicted", spin:"A", dist:null },
+  { name:"K1-2",       l:327.0, b:-29.3, shellN:5, status:"predicted", spin:"A", dist:null },
+  { name:"K2-3",       l:55.5,  b:-82.9, shellN:4, status:"predicted", spin:"B", dist:null },
+  { name:"HTM-OT21-A", l:52.9,  b:9.2,   shellN:5, status:"predicted", spin:"A", dist:null },
+];
+
+// Sphärischer Winkelabstand vom D-Pol
+function angDist(l, b) {
+  const bP=DPOL.b*Math.PI/180, lP=DPOL.l*Math.PI/180;
+  const bO=b*Math.PI/180,      lO=l*Math.PI/180;
+  const c = Math.sin(bP)*Math.sin(bO)+Math.cos(bP)*Math.cos(bO)*Math.cos(lP-lO);
+  return Math.acos(Math.max(-1,Math.min(1,c)))*180/Math.PI;
+}
+
+// Azimut vom D-Pol aus (Position auf dem Kreis)
+function azimuth(l, b) {
+  const bP=DPOL.b*Math.PI/180, lP=DPOL.l*Math.PI/180;
+  const bO=b*Math.PI/180,      lO=l*Math.PI/180;
+  const y = Math.cos(bO)*Math.sin(lO-lP);
+  const x = Math.cos(bP)*Math.sin(bO)-Math.sin(bP)*Math.cos(bO)*Math.cos(lO-lP);
+  return Math.atan2(y,x)*180/Math.PI;
+}
+
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const W=canvas.width, H=canvas.height;
+const cx=W/2, cy=H/2, R=W*0.41;
+
+// Arm-Farben
+const ARM_COLS = ['#7744ff','#44aaff','#ff7744','#ff44aa'];
+const ARM_NAMES = ['Arm 1 (rechts-oben)','Arm 2 (rechts-unten)','Arm 3 (links-oben)','Arm 4 (links-unten)'];
+
+function getParams() {
+  return {
+    tilt12: parseFloat(document.getElementById('tilt12').value),
+    tilt34: parseFloat(document.getElementById('tilt34').value),
+    baseRot: parseFloat(document.getElementById('baserot').value),
+  };
+}
+
+// Berechne 4 Arm-Winkel (Azimut-Achsen)
+function armAngles(p) {
+  return [
+    p.baseRot,
+    p.baseRot + p.tilt12,
+    p.baseRot + 180,
+    p.baseRot + 180 + p.tilt34,
+  ];
+}
+
+// Für jeden Objekt: welchem Arm ist er am nächsten?
+function assignArm(az, armAzs, tol=20) {
+  let best=-1, bestDelta=999;
+  armAzs.forEach((aa,i) => {
+    let d = Math.abs(az - aa);
+    while (d > 180) d = 360-d;
+    if (d < bestDelta) { bestDelta=d; best=i; }
+  });
+  return bestDelta <= tol ? { arm:best, delta:bestDelta } : { arm:-1, delta:bestDelta };
+}
+
+// Partner-Shell-Vorhersagen: für jeden confirmed/candidate → Partner auf gegenüberliegendem Arm
+function computePartners(p) {
+  const aAngles = armAngles(p);
+  const partners = [];
+  CATALOG.filter(o=>o.status!=='predicted').forEach(obj => {
+    const az = azimuth(obj.l, obj.b);
+    const dist = angDist(obj.l, obj.b);
+    const { arm } = assignArm(az, aAngles, 25);
+    if (arm < 0) return;
+    // Partner: gegenüberliegender Arm (0↔2, 1↔3)
+    const partnerArm = (arm+2)%4;
+    const partnerAz = aAngles[partnerArm];
+    // Gleicher Shell-Radius
+    const partnerAzRad = (partnerAz-90)*Math.PI/180;
+    const r = Math.min((dist/180)*R, R*0.95);
+    partners.push({
+      name: `P(${obj.name})`,
+      sourceObj: obj.name,
+      arm: partnerArm,
+      azimut: partnerAz,
+      dist,
+      r,
+      shellN: obj.shellN,
+      spin: obj.spin==='A'?'B':'A',
+    });
+  });
+  return partners;
+}
+
+let hoveredObj = null;
+
+function draw() {
+  const p = getParams();
+  const aAngles = armAngles(p);
+
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle='#03050e';
+  ctx.fillRect(0,0,W,H);
+
+  // Hintergrund-Glow
+  const bg = ctx.createRadialGradient(cx,cy,0,cx,cy,R);
+  bg.addColorStop(0,'rgba(20,40,120,0.18)');
+  bg.addColorStop(0.5,'rgba(8,15,50,0.1)');
+  bg.addColorStop(1,'transparent');
+  ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
+
+  // Gitter
+  ctx.strokeStyle='rgba(100,180,255,0.04)'; ctx.lineWidth=0.5;
+  for (let a=0;a<360;a+=15) {
+    const rad=(a-90)*Math.PI/180;
+    ctx.beginPath(); ctx.moveTo(cx,cy);
+    ctx.lineTo(cx+Math.cos(rad)*R*1.04, cy+Math.sin(rad)*R*1.04); ctx.stroke();
+  }
+  for (let deg=30;deg<=180;deg+=30) {
+    const r=(deg/180)*R;
+    ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2);
+    ctx.strokeStyle=`rgba(100,180,255,${deg===90?0.1:0.04})`; ctx.stroke();
+    ctx.fillStyle='rgba(100,180,255,0.2)'; ctx.font='8px Share Tech Mono';
+    ctx.fillText(deg+'°', cx+r+3, cy-2);
+  }
+
+  // Shell-Ringe (fein)
+  SHELLS.forEach(sh => {
+    const r=(sh.theta/180)*R;
+    if(r<2) return;
+    ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2);
+    ctx.strokeStyle=sh.bwd?'rgba(255,140,60,0.15)':'rgba(80,160,255,0.15)';
+    ctx.lineWidth=sh.bwd?0.6:0.8;
+    ctx.setLineDash(sh.bwd?[8,8]:[]);
+    ctx.stroke(); ctx.setLineDash([]);
+  });
+
+  // ── 4 Helixarme zeichnen ──
+  aAngles.forEach((armAz, armIdx) => {
+    const col = ARM_COLS[armIdx];
+    const armRad = (armAz-90)*Math.PI/180;
+
+    // Arm-Achse (Hauptlinie)
+    ctx.beginPath();
+    ctx.moveTo(cx,cy);
+    ctx.lineTo(cx+Math.cos(armRad)*R*1.02, cy+Math.sin(armRad)*R*1.02);
+    ctx.strokeStyle = col+'55';
+    ctx.lineWidth = 1.2;
+    ctx.setLineDash([6,8]);
+    ctx.stroke(); ctx.setLineDash([]);
+
+    // Geschwungene Helix-Kurve (logarithmische Spirale pro Arm)
+    ctx.beginPath();
+    let first=true;
+    for (let t=0.02; t<=1; t+=0.01) {
+      // Kurve: leicht gebogen um die Achse herum
+      const curve = Math.sin(t*Math.PI)*0.12; // max 12° Auslenkung
+      const angle = armRad + curve * (armIdx%2===0?1:-1);
+      const r = t*R*0.98;
+      const x = cx+Math.cos(angle)*r;
+      const y = cy+Math.sin(angle)*r;
+      first ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+      first=false;
+    }
+    ctx.strokeStyle = col+'80';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    // Arm-Label am Ende
+    const labelR = R*1.07;
+    ctx.fillStyle = col+'cc';
+    ctx.font='9px Share Tech Mono';
+    const lx=cx+Math.cos(armRad)*labelR;
+    const ly=cy+Math.sin(armRad)*labelR;
+    ctx.fillText(ARM_NAMES[armIdx].split(' ')[1]+' '+ARM_NAMES[armIdx].split(' ')[2], lx-20, ly+3);
+  });
+
+  // ── Objekte plotten ──
+  const allObjects = [...CATALOG];
+  const partners = computePartners(p);
+
+  // Sidebar aufbauen
+  const armListEl = document.getElementById('armList');
+  armListEl.innerHTML='';
+  const predEl = document.getElementById('predictions');
+  predEl.innerHTML='';
+
+  const armCounts = [0,0,0,0];
+  let confirmed_plotted=0, candidate_plotted=0, predicted_plotted=0;
+
+  // Objekte
+  allObjects.forEach(obj => {
+    const az = azimuth(obj.l, obj.b);
+    const dist = angDist(obj.l, obj.b);
+    const { arm, delta } = assignArm(az, aAngles, 25);
+
+    const r_c = Math.min((dist/180)*R, R*0.97);
+    const azRad = (az-90)*Math.PI/180;
+    const px = cx+Math.cos(azRad)*r_c;
+    const py = cy+Math.sin(azRad)*r_c;
+
+    const inArm = arm>=0;
+    let col;
+    if (obj.status==='confirmed') { col='#00ffaa'; confirmed_plotted++; }
+    else if (obj.status==='candidate') { col='#ffcc00'; candidate_plotted++; }
+    else { col='#ff6688'; predicted_plotted++; }
+
+    const armCol = inArm ? ARM_COLS[arm] : 'rgba(100,180,255,0.2)';
+    if (inArm) armCounts[arm]++;
+
+    // Verbindungslinie zum Arm
+    if (inArm && delta < 20) {
+      const armRad=(aAngles[arm]-90)*Math.PI/180;
+      const armX=cx+Math.cos(armRad)*r_c;
+      const armY=cy+Math.sin(armRad)*r_c;
+      ctx.beginPath();
+      ctx.moveTo(px,py); ctx.lineTo(armX,armY);
+      ctx.strokeStyle=armCol+'40'; ctx.lineWidth=0.6;
+      ctx.setLineDash([2,4]); ctx.stroke(); ctx.setLineDash([]);
+    }
+
+    // Glow
+    if (inArm || obj.status==='confirmed') {
+      const g=ctx.createRadialGradient(px,py,0,px,py,14);
+      g.addColorStop(0,col+'50'); g.addColorStop(1,'transparent');
+      ctx.fillStyle=g; ctx.beginPath(); ctx.arc(px,py,14,0,Math.PI*2); ctx.fill();
+    }
+
+    // Punkt
+    const sz = obj.status==='confirmed'?7:inArm?5:3;
+    ctx.beginPath(); ctx.arc(px,py,sz,0,Math.PI*2);
+    ctx.fillStyle = inArm ? col : col+'40';
+    ctx.fill();
+    if (obj.status==='confirmed') {
+      ctx.strokeStyle=col+'80'; ctx.lineWidth=1.5; ctx.stroke();
+    }
+
+    // Label
+    if (inArm || obj.status==='confirmed') {
+      ctx.fillStyle=col+(inArm?'':'80');
+      ctx.font=`${obj.status==='confirmed'?10:8}px Share Tech Mono`;
+      ctx.fillText(obj.name, px+sz+3, py+3);
+    }
+
+    // Arm-Zuordnung in Sidebar
+    if (inArm) {
+      const armSection = document.getElementById(`arm${arm}`);
+      const row = document.createElement('div');
+      row.className=`obj-row ${obj.status}`;
+      const bc = obj.status==='confirmed'?'b-conf':obj.status==='candidate'?'b-cand':'b-pred';
+      const bt = obj.status==='confirmed'?'conf':obj.status==='candidate'?'kand':'pred';
+      row.innerHTML=`<span>${obj.name}</span><span style="opacity:0.5">Δ${delta.toFixed(0)}°</span><span class="badge ${bc}">${bt}</span>`;
+      if (armSection) armSection.appendChild(row);
+    }
+  });
+
+  // Arm-Sektionen erstellen
+  ARM_NAMES.forEach((name,i) => {
+    const sec=document.createElement('div');
+    sec.className='arm-section';
+    const lbl=document.createElement('div');
+    lbl.className='arm-label';
+    lbl.style.cssText=`background:${ARM_COLS[i]}22;color:${ARM_COLS[i]};border-left:2px solid ${ARM_COLS[i]}`;
+    lbl.textContent=`${name} · Az=${aAngles[i].toFixed(1)}° · ${armCounts[i]} Obj.`;
+    sec.appendChild(lbl);
+    sec.id=`arm${i}`;
+    armListEl.appendChild(sec);
+  });
+
+  // Jetzt Objekte nochmal zuordnen (Sektionen existieren jetzt)
+  allObjects.forEach(obj => {
+    const az=azimuth(obj.l,obj.b);
+    const dist=angDist(obj.l,obj.b);
+    const {arm,delta}=assignArm(az,aAngles,25);
+    if (arm<0) return;
+    const sec=document.getElementById(`arm${arm}`);
+    if (!sec) return;
+    const row=document.createElement('div');
+    row.className=`obj-row ${obj.status}`;
+    const bc=obj.status==='confirmed'?'b-conf':obj.status==='candidate'?'b-cand':'b-pred';
+    const bt=obj.status==='confirmed'?'conf':obj.status==='candidate'?'kand':'pred';
+    row.innerHTML=`<span>${obj.name}</span><span style="opacity:0.5">Δ${delta.toFixed(0)}°</span><span class="badge ${bc}">${bt}</span>`;
+    sec.appendChild(row);
+  });
+
+  // ── Partner-Shells zeichnen ──
+  partners.forEach(pt => {
+    const armRad=(pt.azimut-90)*Math.PI/180;
+    const px=cx+Math.cos(armRad)*pt.r;
+    const py=cy+Math.sin(armRad)*pt.r;
+    const col=ARM_COLS[pt.arm];
+
+    // Gestrichelter Kreis = Vorhersage
+    ctx.beginPath(); ctx.arc(px,py,6,0,Math.PI*2);
+    ctx.strokeStyle=col+'aa'; ctx.lineWidth=1.2;
+    ctx.setLineDash([3,3]); ctx.stroke(); ctx.setLineDash([]);
+
+    ctx.fillStyle=col+'60';
+    ctx.font='8px Share Tech Mono';
+    ctx.fillText(pt.name, px+9, py+3);
+
+    // Prediction Sidebar
+    const row=document.createElement('div');
+    row.className='obj-row predicted';
+    row.style.color=col;
+    row.innerHTML=`<span>${pt.name}</span><span style="opacity:0.5">n=${pt.shellN}</span><span class="badge b-pred">OT-41</span>`;
+    predEl.appendChild(row);
+  });
+
+  // Statistik
+  document.getElementById('stats').innerHTML=`
+    Arm 1 (r-oben): <span>${armCounts[0]}</span> Obj.<br>
+    Arm 2 (r-unten): <span>${armCounts[1]}</span> Obj.<br>
+    Arm 3 (l-oben): <span>${armCounts[2]}</span> Obj.<br>
+    Arm 4 (l-unten): <span>${armCounts[3]}</span> Obj.<br>
+    ──────────────<br>
+    Confirmed: <span>${confirmed_plotted}</span><br>
+    Kandidaten: <span>${candidate_plotted}</span><br>
+    Predicted: <span>${predicted_plotted}</span><br>
+    Partner-Pred.: <span>${partners.length}</span>
+  `;
+
+  // ── Sigma_meta Zentrum ──
+  const t=Date.now()*0.001;
+  const pulse=7+Math.sin(t*2)*2.5;
+  const cg=ctx.createRadialGradient(cx,cy,0,cx,cy,pulse*3);
+  cg.addColorStop(0,'rgba(255,255,255,0.9)');
+  cg.addColorStop(0.4,'rgba(150,220,255,0.3)');
+  cg.addColorStop(1,'transparent');
+  ctx.fillStyle=cg; ctx.beginPath(); ctx.arc(cx,cy,pulse*3,0,Math.PI*2); ctx.fill();
+  ctx.beginPath(); ctx.arc(cx,cy,4,0,Math.PI*2);
+  ctx.fillStyle='white'; ctx.fill();
+  ctx.strokeStyle=`rgba(150,220,255,${0.4+Math.sin(t*2)*0.2})`;
+  ctx.lineWidth=1; ctx.beginPath(); ctx.arc(cx,cy,pulse,0,Math.PI*2); ctx.stroke();
+  ctx.fillStyle='rgba(255,255,255,0.65)'; ctx.font='9px Share Tech Mono';
+  ctx.fillText('Σ_meta', cx+8, cy-8);
+  ctx.fillText('D-Pol l=305°', cx+8, cy+4);
+
+  requestAnimationFrame(draw);
+}
+
+// Controls
+['tilt12','tilt34','baserot'].forEach(id => {
+  document.getElementById(id).addEventListener('input', function() {
+    document.getElementById(id+'val').textContent=this.value+'°';
+  });
+});
+
+// Tooltip
+canvas.addEventListener('mousemove', e => {
+  const rect=canvas.getBoundingClientRect();
+  const mx=(e.clientX-rect.left)*(W/rect.width);
+  const my=(e.clientY-rect.top)*(H/rect.height);
+  const tip=document.getElementById('tip');
+  const p=getParams();
+  const aAngles=armAngles(p);
+  let found=null;
+
+  CATALOG.forEach(obj => {
+    const az=azimuth(obj.l,obj.b);
+    const dist=angDist(obj.l,obj.b);
+    const r_c=Math.min((dist/180)*R,R*0.97);
+    const azRad=(az-90)*Math.PI/180;
+    const px=cx+Math.cos(azRad)*r_c;
+    const py=cy+Math.sin(azRad)*r_c;
+    if (Math.sqrt((mx-px)**2+(my-py)**2)<12) {
+      const {arm,delta}=assignArm(az,aAngles,25);
+      found={obj,az,dist,arm,delta,px,py};
+    }
+  });
+
+  if (found) {
+    const {obj,az,dist,arm,delta}=foun
