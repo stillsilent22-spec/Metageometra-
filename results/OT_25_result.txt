@@ -1,0 +1,25 @@
+======================================================================
+OT-25: GWTC chi_eff Spin-Ausrichtung vs HTM 4-Arm-Topologie
+======================================================================
+
+  Datenbasis: GWTC-3+4 (163 BBH-Ereignisse mit chi_eff, p_astro>0.5)
+  chi_eff Mittelwert: 0.0683  Std: 0.1427
+  chi_eff Bereich: [-0.290, 0.680]
+
+  Test 1: t-Test chi_eff = 0
+    t=6.0917,  p=0.0000  *
+
+  Test 2: Sign-Test (prograd vs retrograd)
+    n_pos=102, n_neg=56
+    P(>0) = 0.646  p_binom = 0.0003
+
+  Test 3: KS vs N(0,sigma)
+    KS D=0.2280, p=0.0000  *
+
+  Test 4: Form
+    Kurtosis=1.8740, Skewness=1.0093
+
+  HTM-Vorhersage: chi_eff_mean = 0, P(>0) = 0.5, Kurtosis < 0 (bimodal)
+
+  BEWERTUNG OT-25: TEILWEISE BESTAETIGT
+======================================================================

@@ -1,0 +1,92 @@
+========================================================================
+OT-14: SRM Halo vs NFW — SPARC Rotationskurven
+========================================================================
+
+Daten:  SPARC Lelli+2016 (AJ 152 157)
+        CDS code J/AJ/152/157
+        175 Galaxien gefittet (von 175 in SPARC)
+
+SRM-Profil:  rho(r) = rho_0 * (1 + r/r_s)^(-1.205)
+             r_s = 42.3 kpc   — FEST, kein freier Parameter
+             1 freier Parameter pro Galaxie: rho_0
+
+NFW-Profil:  rho(r) = rho_s / [(r/r_s)(1+r/r_s)^2]
+             2 freie Parameter pro Galaxie: rho_s, r_s
+
+M/L Scheibe  Upsilon_d = 0.5  (SPARC Standard bei [3.6])
+M/L Bulge    Upsilon_b = 0.7  (SPARC Standard bei [3.6])
+Fehlerboden  eV_min = 2.0 km/s
+
+────────────────────────────────────────────────────────────────────────
+GESAMTSTATISTIK
+────────────────────────────────────────────────────────────────────────
+
+  Galaxien gefittet:          175
+  Gesamtpunkte:               3391
+
+  Gesamt-χ²  SRM:             442568.2
+  Gesamt-χ²  NFW:             14427.7
+  Δ Gesamt-χ² (SRM - NFW):    +428140.5
+
+  Median red.χ²  SRM:         14.005  (dof = n-1)
+  Median red.χ²  NFW:         1.145  (dof = n-2)
+  Mittelw. red.χ²  SRM:       60.407
+  Mittelw. red.χ²  NFW:       3.844
+
+Gewinnerauszählung (reines χ²):
+  SRM gewinnt (χ²_SRM < χ²_NFW):  20 / 175 = 11.4%
+  NFW gewinnt (χ²_NFW < χ²_SRM): 153 / 175 = 87.4%
+
+AIC-Vergleich  (straft extra Parameter: ΔAIC = Δχ² - 2):
+  SRM bevorzugt (ΔAIC < 0):    24 / 175 = 13.7%
+  NFW bevorzugt (ΔAIC > 0):   151 / 175 = 86.3%
+  Median ΔAIC (SRM-NFW):      +136.36
+
+BIC-Vergleich  (straft extra Parameter stärker: ΔBIC = Δχ² - ln(n)):
+  SRM bevorzugt (ΔBIC < 0):    24 / 175 = 13.7%
+  NFW bevorzugt (ΔBIC > 0):   151 / 175 = 86.3%
+  Median ΔBIC (SRM-NFW):      +135.87
+
+────────────────────────────────────────────────────────────────────────
+INTERPRETATION
+────────────────────────────────────────────────────────────────────────
+
+  Gesamt-χ² Gewinner:   NFW
+  AIC-Gewinner:         NFW
+  BIC-Gewinner:         NFW
+
+  >> NFW gewinnt auf chi^2-Basis um +428141 (2967.5%).
+    SRM mit festem r_s = 42.3 kpc passt nicht fuer alle Galaxien.
+    Selbst per AIC/BIC zieht NFW vor: r_s = 42.3 kpc
+    ist fuer einen signifikanten Teil des SPARC-Datensatzes falsch.
+
+────────────────────────────────────────────────────────────────────────
+TOP 20 GALAXIEN (sortiert nach chi²_red SRM, min. 5 Punkte)
+────────────────────────────────────────────────────────────────────────
+
+  Name            n   chi2_SRM   chi2_NFW   rchi2_SRM   rchi2_NFW     ΔAIC  Gewinner
+  --------------------------------------------------------------------------------
+  F574-2          5       0.20       0.13       0.049       0.044     -1.9       SRM
+  UGC02023        5       0.23       2.16       0.057       0.719     -3.9       SRM
+  UGC07577        9       0.91       1.36       0.113       0.194     -2.4       SRM
+  NGC4068         6       0.79       4.74       0.158       1.185     -5.9       SRM
+  UGC08837        8       2.19      14.61       0.313       2.436    -14.4       SRM
+  NGC3949         7       2.29       2.70       0.381       0.540     -2.4       SRM
+  NGC5005        18       7.01      10.13       0.413       0.633     -5.1       SRM
+  NGC2976        27      13.10      46.83       0.504       1.873    -35.7       SRM
+  UGC07559        7       3.40       0.72       0.566       0.145     +0.7       NFW
+  UGC06628        7       4.61       1.33       0.768       0.267     +1.3       NFW
+  UGC07866        7       5.50       0.22       0.917       0.044     +3.3       NFW
+  KK98-251       15      12.86      16.49       0.918       1.269     -5.6       SRM
+  UGC11557       12      10.69      13.44       0.972       1.344     -4.7       SRM
+  DDO064         14      13.74       6.28       1.057       0.523     +5.5       NFW
+  UGC06818        8       7.42      12.41       1.060       2.068     -7.0       SRM
+  NGC4088        12      11.79      25.37       1.071       2.537    -15.6       SRM
+  UGC07089       12      12.14       2.50       1.104       0.250     +7.6       NFW
+  F563-V1         6       5.88       1.00       1.176       0.251     +2.9       NFW
+  IC2574         34      40.90      79.56       1.239       2.486    -40.7       SRM
+  UGCA444        36      44.62       1.95       1.275       0.057    +40.7       NFW
+
+────────────────────────────────────────────────────────────────────────
+Plot: C:\Users\kalle\Neuer Ordner (4)\results\OT_14_plot.png
+────────────────────────────────────────────────────────────────────────

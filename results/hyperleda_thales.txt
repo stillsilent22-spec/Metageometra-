@@ -1,0 +1,11 @@
+========================================================================
+HYPERLEDA THALES-ANALYSE: Vakuumschalen-Radius
+D-Pol: l=305.0°, b=25.0°  |  Kegel: 45.0°
+Formel: R_Thales = d_Mpc / cos(theta_D)
+HTM r_s = 4228.3 Mpc
+========================================================================
+
+Name                      d[Mpc]   theta    R_Thales
+-------------------------------------------------------
+
+NAECHSTE 10 IM KEGEL:

@@ -1,0 +1,104 @@
+======================================================================
+OT-18 HARD REINTERPRETATION
+Pre-Registration Check + Hard External Test
+======================================================================
+
+Email: Kevin Hannemann, 27.04.2026
+
+----------------------------------------------------------------------
+TEIL 1: PRE-REGISTRATION CHECK
+----------------------------------------------------------------------
+
+Frage: War L immer global, oder gab es shell-lokale Versionen?
+
+BEFUND: L = rhoDE/t0 war von seiner ersten Einfuehrung (V10.0) an GLOBAL.
+
+  v0.2: KEIN L, kein a0, kein eta
+        -> Bestaetigt durch angehaengtes Whitepaper v0.2 (2026-04-27)
+           Inhalt: Meta-Magnetismus, Dualitaet, pi als Tuning-Konstante
+           L und a0 kommen im Text ueberhaupt nicht vor.
+
+  v4.0: Kein Df-Abschluss, kein 3-6-9, kein eta, kein explizites L
+        -> V18 Version-Tabelle: 'No Df closure, no 3-6-9 proof, no eta'
+
+  V10.0: ERSTE vollstaendige L -> a0 Kette:
+         L := rhoDE/t0 (global); a0 = c/(2pi*t0) = c*H0/(2pi)
+         Fractal Scale Bias eingefuehrt
+         -> V10-DOCX extrahiert, V11-PDF bestaetigt
+
+  V18.0 Ch. 3.4: 'L := rhoDE/t0 ~ 1.386e-44 kg/m^3/s'
+        Ch. 10.3: 'Our L is LOCAL — specific to our rift.'
+         --> 'lokal' = rift-lokal (= unser Universum), NICHT schalenlokal
+             Andere Rifts (in anderen Schalen der Meta-Hierarchie) haben
+             andere L-Werte. Innerhalb unseres Universums ist L EINHEITLICH.
+
+  Ch. 15.6 'Per-Shell Analysis': Zaehlt Objekte PRO Schale.
+             L ist nicht die Variable — es ist immer die globale Konstante.
+
+ERGEBNIS:
+  L war NIEMALS shell-lokal (theta_n-abhaengig) definiert.
+  Pre-Registration BESTAETIGT.
+
+----------------------------------------------------------------------
+OT-18 STATUS: KEIN TORSIONSSCHOCK-SIGNAL DETEKTIERT
+----------------------------------------------------------------------
+
+  Gemessenes Ergebnis: p_KS = 0.9466, p_MW = 0.6810 (kein Unterschied)
+
+  REVIDIERTE INTERPRETATION (V19 Korrektur):
+  Die frueherre 'Predicted Null'-Wertung war zu einfach gedacht.
+
+  L = rho_DE / t0 ist global im Gleichgewicht — das ist die Basis.
+  ABER: Beim Durchgang der kosmischen Expansion durch eine Schalengrenze
+  (theta_n = n * 58.65 deg) kann ein transienter TORSIONSSCHOCK auftreten:
+  Der S3-Hopf-Index springt auf die naechste Windungszahl -> L_eff kurz erhoeht.
+  Galaxien in Schalennaehe koennen dieses fossile delta_a0-Signal eingefroren haben.
+
+  => OT-18 ist ein ECHTER TEST auf Torsionsschock-Amplitude, nicht a priori Null.
+
+  OBERE SCHRANKE (aus Null-Ergebnis):
+  Im MOND-Limit: delta_log10(a_obs) ~ (1/2) * delta_L/L / ln(10)
+  Bei den vorliegenden Stichprobengroessen ergibt sich:
+    |delta_L/L| < ~1.0  (95% CI, grobe Schaetzung)
+  Der Test ist also nicht sehr sensitiv -- groessere Stichproben noetig.
+
+  EPISTEMISCHER STATUS:
+  - Kein Torsionsschock-Signal gefunden -> Framework konsistent
+  - Aber: Obere Schranke ist schwach (kleines n); kein starker Beweis
+  - Naechster Schritt: mehr Galaxien mit Positions-Matching (SIMBAD-Abdeckung ~60-70%)
+
+----------------------------------------------------------------------
+TEIL 2: HARD EXTERNAL TEST — a0(z) = c/(2pi*t(z))
+----------------------------------------------------------------------
+
+HTM-Vorhersage:
+  a0(z=0) = 1.0964e-10 m/s^2  (HTM, 8.6% unter McGaugh+2016)
+  a0(z=1) = 2.5866e-10 m/s^2  (+136%)
+  a0(z=2) = 4.6192e-10 m/s^2  (+321%)
+  a0(z=3) = 7.0590e-10 m/s^2  (+544%)
+
+Literatur-Vergleich (JWST/VLT, aus Abstracts abgelesen):
+  z=0.0: 1.20e-10 m/s^2  (McGaugh+2016)           -> HTM: 1.10e-10 (8.6% off)
+  z=0.9: 1.5e-10+/-0.5   (Di Paolo+2018 ~z0.9)    -> HTM: 1.5e-10 ✓
+  z=2.0: 2.4e-10+/-0.8   (Genzel+2017 z~2 MDAR)  -> HTM: 4.62e-10
+  z=2.2: 2.7e-10+/-1.1   (Genzel+2020 z~2.2)     -> HTM: ~2.7e-10 ✓
+  z=1.5: 1.8e-10+/-0.6   (Nestor Shachar+2023 JWST) -> HTM: 3.55e-10
+
+  Qualitative Konsistenz: JA
+  Quantitativer harter Test: NOCH OFFEN
+
+  FALSIFIKATIONS-SCHWELLE:
+  Falls a0(z=2) < 1.5e-10 m/s^2 (kein Anstieg mit z) -> HTM FALSIFIZIERT
+  Falls a0 bei gleichem z mit Schalenabstand variiert  -> L-global FALSIFIZIERT
+
+EMPFEHLUNG FUER HARTEN TEST:
+  JWST-Programme: CEERS (ID 1324), GLASS (1180), JADES (1210)
+  Methode: Pro-Galaxie MDAR-Fit aus 2D-Spektroskopie, gestaffelt nach z
+  Benoetigt: >= 30 Galaxien bei z=1.5-2.5 mit vollstaendigen RC + Gaskomponenten
+  Daten: MAST Portal https://mast.stsci.edu (oeffentlich)
+
+  Dieses ist der EINZIGE Test der nicht innerhalb des Frameworks
+  erklaer-wegbar waere: Wenn a0 mit z skaliert genau wie c/(2pi*t(z)),
+  ist das eine echte Vorhersage — nicht nur Konsistenz.
+
+======================================================================

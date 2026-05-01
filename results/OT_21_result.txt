@@ -1,0 +1,24 @@
+====================================================================
+OT-21: Milankovitch-Zyklen als Subharmonische von T_prec
+====================================================================
+
+HTM: T_prec = 25771.57 yr ist der Tier-3 Resonanztakt (Sgr A*, Shell n=1)
+
+  Zyklus                         T [yr]       Verhaeltnis     Abw%  Quelle
+  --------------------------------------------------------------------------------
+  Obliquitat (41kyr)             41,000       2:1 = 1.591    20.45  Laskar 2004
+  Ekzentrizitat (95kyr)          95,000       4:1 = 3.686     7.84  Imbrie+1984
+  Ekzentrizitat (405kyr)        405,000     16:1 = 15.715     1.78  Laskar 2004
+  Planet-9 (5kyr)                 5,000  T_prec/5 = 5.154     3.09  Batygin+2016
+  Bond-Zyklus (1.47kyr)           1,470  T_prec/18 = 17.532     2.60  Bond+1997
+  Brayley (2.3kyr)                2,300  T_prec/11 = 11.205     1.86  Brayley 1830
+
+Monte-Carlo Null-Test:
+  Median Abw. echter Zyklen: 2.84%
+  MC-Treffer: 486/1000 → p = 0.486
+  Status: NICHT SIGNIFIKANT (p>0.05)
+
+ERGEBNIS: Milankovitch-Zyklen zeigen KEINE exakten Ganzzahl-Subharmoniken
+von T_prec. Obliquitat (41kyr) ~ T_prec*1.59, Ekzentrizitat (95kyr) ~ T_prec*3.69
+sind keine runden Teiler. OT-21 STATUS: NICHT BESTATIGT (predicted signal fehlt)
+====================================================================

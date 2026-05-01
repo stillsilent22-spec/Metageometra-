@@ -1,0 +1,15 @@
+════════════════════════════════════════════════════════════
+OT-2: f_echo aus ersten Prinzipien (V21.3)
+════════════════════════════════════════════════════════════
+D_f,eff  = 0.333333 (~1/3)
+N = ln(rho_Planck/rho_DE) = 283.0607
+
+Pfad 1: exp(D_eff*N)         = 9.4892e+40
+Pfad 2: (r_s/r_Planck)^D_eff = 2.0061e+20
+Pfad 3: eta_obs/eta_ts        = 4.5047e+51
+Referenz (obs):               = 2.07e+40
+
+Pfad1-Pfad2 Abweichung: 20.67 dex
+Status: INCONCLUSIVE
+Naechster OT: OT-7 (w(z) DESI)
+════════════════════════════════════════════════════════════

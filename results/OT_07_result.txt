@@ -1,0 +1,42 @@
+======================================================================
+OT-07: w(z) HTM-Vorhersage vs DESI DR2 BAO
+======================================================================
+
+Daten: DESI DR2 (arXiv:2503.14738, Phys. Rev. D 112, 083515, 2025)
+       CobayaSampler/bao_data/desi_bao_dr2
+       13 Messpunkte: DV/rs + DM/rs + DH/rs bei 7 Rotverschiebungen
+
+HTM-Formel:
+  w_HTM(z) = -1 + (1 - 1.8/2) * 0.1 * (1+z)^(3*0.1)
+           = -1 + 0.01 * (1+z)^0.3
+
+  z=0:    w = -0.990
+  z=0.5:  w = -0.9887
+  z=1.0:  w = -0.9877
+  z=2.3:  w = -0.9857
+
+CPL best-fit (DESI DR2 + CMB, Tab. V):
+  w₀ = -0.838 ± 0.055,  wₐ = -0.685 ± 0.28
+  Präferenz gg. ΛCDM: 3.1σ
+
+Chi²-Ergebnisse (13 Freiheitsgrade):
+  χ²(ΛCDM) = 24.82   red.χ² = 1.91
+  χ²(CPL)  = 14.01   red.χ² = 1.08
+  χ²(HTM)  = 21.17   red.χ² = 1.63
+
+  Bestes Modell: CPL
+  Δχ²(ΛCDM - CPL) = 10.81
+  Δχ²(HTM  - CPL) = 7.15
+  Δχ²(CPL  - CPL) = 0.00
+
+INTERPRETATION:
+  HTM w(z): sehr kleine Abweichung von ΛCDM (max ~1% bei z=2.3)
+  Der CPL-Fit passt besser als ΛCDM (erwartet, da 3.1σ Signal)
+  HTM verbessert ΛCDM um Δχ² = 3.65 -> schwache HTM-Signatur
+
+  Das DESI 3.1σ-Signal geht in Richtung w₀ > -1, wₐ < 0
+  HTM-Vorhersage: w₀_eff ≈ -0.990 -> innerhalb 2σ von ΛCDM
+  -> HTM-Abweichung zu klein um durch DESI DR2 aktuell zu trennen
+
+Plot: C:\Users\kalle\Neuer Ordner (4)\results\OT_07_plot.png
+======================================================================

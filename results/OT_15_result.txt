@@ -1,0 +1,44 @@
+======================================================================
+OT-15: Skaliertes SRM Halo (r_s ∝ M^(1/3)) vs SPARC
+======================================================================
+
+Daten:  SPARC Lelli+2016 (CDS J/AJ/152/157)
+        175 Galaxien gefittet, 3391 Datenpunkte
+
+SRM-Skalierung (Torsionskompression, V19):
+  r_s(gal) = 42.3 kpc × (M_stellar / M_MW)^(1/3)
+  M_MW_stellar = 5.0e+10 M_sun
+  M_stellar = L_3.6 × 10^9 × 0.5 M_sun/L_sun
+
+  r_s Range: 2.09 – 71.84 kpc
+  r_s Median: 14.33 kpc
+  (OT-14 hatte fest r_s = 42.3 kpc fuer ALLE Galaxien)
+
+----------------------------------------------------------------------
+ERGEBNISSE
+----------------------------------------------------------------------
+
+  Gesamt-chi2  OT-14 (r_s fest):  442568.2
+  Gesamt-chi2  OT-15 (r_s skal.): 440129.9
+  Delta-Gesamt: -2438.3 (-0.6%)
+
+  BEIDE Modelle haben 1 freien Parameter (nur rho_0)!
+  -> Direkter Vergleich OHNE Parameterstrafe
+
+  OT-15 verbessert OT-14: 119/175 = 68.0% der Galaxien
+  OT-14 bleibt besser:    35/175 = 20.0% der Galaxien
+  Median Delta-chi2 (OT15-OT14): -5.77
+  Median red.chi2 OT-14: 14.005
+  Median red.chi2 OT-15: 11.030
+
+----------------------------------------------------------------------
+INTERPRETATION
+----------------------------------------------------------------------
+
+  OT-15 VERBESSERT OT-14 um 0.6% im Gesamt-chi2.
+  Die Massenskalierung r_s ∝ M^(1/3) erhoeht die Passguete.
+  Das deutet auf eine physikalisch korrekte Skaling des SRM-Halos hin.
+  OT-15 BESTEHT (bedingt) — Massenskalierung statistisch gestützt.
+
+Plot: c:\Users\kalle\Neuer Ordner (4)\results\OT_15_plot.png
+======================================================================

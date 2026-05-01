@@ -1,0 +1,85 @@
+========================================================================
+  OT-40: Permutationstest V20-Schalen vs. CF3-Hintergrund
+========================================================================
+
+  V20 Schalen (delta=1.0, chi=59.1):
+    n=1: 59.11 deg
+    n=2: 118.18 deg
+    n=3: 175.96 deg
+    n=4: 123.51 deg
+    n=5: 64.60 deg
+    n=6: 8.07 deg
+
+  Teststatistik: T = sum_i exp(-r_i^2 / (2*2.0^2))
+  Permutationen: 10000
+
+  SMBHs geladen: 97
+  T_obs = 17.4668
+
+  CF3 Hintergrundkatalog: 2000 Galaxien (CF3 Vollhimmel (J/AJ/152/50, 2000 Gruppen))
+  CF3 theta_D Bereich: 1.1 bis 176.1 deg
+
+  Permutationstest (10000 Stichproben) ...
+  Fertig.
+
+  T_obs           = 17.4668
+  T_rand (Mittel) = 14.4303
+  T_rand (Std)    = 2.8071
+  T_rand (95pct)  = 19.1214
+  z-Wert          = 1.08  sigma
+  p-Wert (perm)   = 0.1403  (1403/10000)
+
+------------------------------------------------------------------------
+  Schalenweise Permutationstest (sigma=2 deg pro Schale):
+    n    theta   T_obs_n   T_mean_n       z       p_n
+------------------------------------------------------------------------
+    1    59.11     7.083      3.989    1.99    0.0310  **
+    2   118.18     2.182      2.721   -0.42    0.6315  
+    3   175.96     2.889      0.196    7.51    0.0000  ***
+    4   123.51     3.223      2.529    0.54    0.2715  
+    5    64.60     2.275      4.138   -1.13    0.8820  
+    6     8.07     1.186      2.080   -0.75    0.7500  
+
+------------------------------------------------------------------------
+  Top-Treffer (kleinstes Residuum zu naechster Schale):
+------------------------------------------------------------------------
+  Name                theta    n    shell    Delta
+  --------------------------------------------------
+  NGC 2273          123.626  n=4  123.507   +0.119
+  NGC 3489           58.966  n=1   59.105   -0.139
+  NGC 3384           59.266  n=1   59.105   +0.161
+  NGC 3379           59.281  n=1   59.105   +0.176
+  NGC 6251          123.114  n=4  123.507   -0.393
+  Sgr A*             58.653  n=1   59.105   -0.452
+  M 32              175.352  n=3  175.965   -0.613
+  M 31              175.092  n=3  175.965   -0.873
+  NGC 1550          122.441  n=4  123.507   -1.066
+  NGC 5128            6.973  n=6    8.066   -1.093
+  NGC 4889           65.811  n=5   64.604   +1.207
+  NGC 404           177.283  n=3  175.965   +1.318
+  NGC 3377           60.510  n=1   59.105   +1.405
+  NGC 3842           60.546  n=1   59.105   +1.441
+  UGC 3789          119.676  n=2  118.181   +1.495
+  NGC 2748          119.685  n=2  118.181   +1.504
+  NGC 3608           61.081  n=1   59.105   +1.976
+  M 85               56.644  n=1   59.105   -2.461
+  NGC 2960           62.124  n=5   64.604   -2.480
+  NGC 4751            5.066  n=6    8.066   -3.000
+
+========================================================================
+  OT-40 VERDICT
+========================================================================
+
+  Permutationstest (N=10000, CF3-Hintergrund, sigma=2.0 deg):
+  T_obs = 17.4668  |  T_mean(rand) = 14.4303  |  z = 1.08
+  p-Wert = 0.1403
+
+  => NICHT SIGNIFIKANT
+
+  Staerkste Einzelschale: n=3 (theta=175.96 deg), p=0.0000
+
+  Kein signifikantes Signal gegenueber CF3-Hintergrund.
+  Beide Kataloge (SMBH + CF3) clustern aehnlich stark auf V20-Schalen.
+  Moegliche Interpretation: V20-Schalen beschreiben allgemeine
+  Grossstruktur des Universums, nicht SMBH-spezifisch.
+========================================================================

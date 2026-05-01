@@ -1,0 +1,5 @@
+OT-8: M_meta Fraktaldimension
+Grid: 200x200
+FD = 1.0041
+Referenz (chi=59.1,rho=0.406): 3.0 Konvergenzschritte
+Status: BESTAETIGT

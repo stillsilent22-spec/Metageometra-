@@ -1,0 +1,55 @@
+====================================================================
+HTM-Quasar-Signal: Unabhängige Bestätigung
+Datum: 2026-04-28 02:23
+θ₀=58.65°  TOL_ANG=4.0°  R_S=4228.3 Mpc
+Referenzsignal: SDSS DR16Q z≈0.97, nc=3 Ratio=1.74× (vorher)
+====================================================================
+
+Vorhersage (wie Merkur-Perihel-Test):
+  HTM-Schale n=1 bei R=4228 Mpc (z≈0.97): nc=3-Exzess erwartet
+  HTM-Schale n=2 bei R=8456 Mpc (z≈2.30): nc=3-Exzess erwartet
+  Zwischen Schalen (z≈0.50): kein Exzess erwartet
+
+── SDSS DR16Q z=0.97 (Referenz) ──
+   N=100000
+     nc     obs%      MC%    Ratio
+      0   21.865   48.835   0.4477
+      1   35.868   28.990   1.2373
+      2   31.887   17.475   1.8247
+      3    7.834    3.750   2.0891
+      4    2.546    0.950   2.6800
+
+── Test A: 2QZ/eBOSS z=0.97 ──
+   N=1495
+     nc     obs%      MC%    Ratio
+      0   29.030   45.495   0.6381
+      1   26.355   26.720   0.9863
+      2   30.903   19.595   1.5771
+      3    8.094    5.725   1.4137
+      4    5.619    2.465   2.2794
+
+── Test B: SDSS z=0.50 (Null) ──
+   N=50000
+     nc     obs%      MC%    Ratio
+      0   19.768   53.085   0.3724
+      1   47.768   28.645   1.6676
+      2   29.484   15.400   1.9145
+      3    2.980    2.325   1.2817
+      4    0.000    0.545   0.0000
+
+── Test C: SDSS z=2.30 (n=2-Schale) ──
+   N=50000
+     nc     obs%      MC%    Ratio
+      0   19.230   55.105   0.3490
+      1   50.326   27.680   1.8181
+      2   29.976   14.700   2.0392
+      3    0.468    2.000   0.2340
+      4    0.000    0.515   0.0000
+
+
+── nc=3 Zusammenfassung ──
+  Test                              Ratio  Erwartung      Ergebnis
+  SDSS z=0.97 (Referenz)            2.089  Exzess>1.2×     ✓ Bestätigt
+  2QZ/eBOSS z=0.97                  1.414  Exzess>1.2×     ✓ Bestätigt
+  SDSS z=0.50 (Null)                1.282  Ratio≈1.0       ! Unerwartet
+  SDSS z=2.30 (n=2)                 0.234  Exzess>1.2×     ✗ Kein Signal

@@ -1,0 +1,152 @@
+========================================================================
+MULTI-KATALOG THALES-ANALYSE: VAKUUMSCHALEN-RADIUS
+D-Pol: l=305.0°, b=25.0°  |  Kegel: 45.0°
+Formel: R_Thales = d_Mpc / cos(theta_D)  |  H0 = 73.0 km/s/Mpc
+HTM Vakuumschalen-Radius r_s = 4228.3 Mpc
+Kataloge: CF3=3707, CF2=269, 2MRS=7268, SMBH=0
+========================================================================
+
+Name                      Src   d[Mpc]   theta    R_Thales
+--------------------------------------------------------------
+  Antlia                  CF3      1.3   38.3°         1.7
+  NGC003109               CF3      1.4   39.1°         1.8
+  IC3104                  CF3      2.4   42.1°         3.2
+  LEDA                    CF2      2.6   43.9°         3.6
+  ESO269-37               CF3      3.1    8.8°         3.2
+  ES274-001               CF3      3.2   26.0°         3.5
+  ESO383-87               CF3      3.2    9.8°         3.2
+  NGC5206                 CF3      3.2   11.9°         3.3
+  ESO321-014              CF3      3.3    9.3°         3.3
+  NGC5237                 CF3      3.3    8.6°         3.4
+  ESO325-11               CF3      3.4    9.4°         3.4
+  LEDA                    CF2      3.5   39.8°         4.5
+  KK217                   CF3      3.5   11.5°         3.6
+  NGC5253                 CF3      3.5   10.1°         3.6
+  PGC51659                CF3      3.6   18.2°         3.8
+  NGC5128                 CF3      3.7    7.0°         3.7
+  LEDA                    CF2      3.7   13.0°         3.8
+  KK211                   CF3      3.7   10.6°         3.7
+  NGC004945               CF3      3.7   11.7°         3.8
+  NGC5011C                CF3      3.7    5.9°         3.7
+  NGC5102                 CF3      3.7    4.4°         3.7
+  ESO269-058              CF3      3.8    9.3°         3.8
+  ESO269-66               CF3      3.8    7.4°         3.8
+  KK213                   CF3      3.8   10.0°         3.8
+  ESO324-24               CF3      3.8    6.3°         3.8
+  KK221                   CF3      3.8   12.7°         3.9
+  KK197                   CF3      3.8    6.2°         3.9
+  LEDA                    CF2      3.8    9.1°         3.9
+  LEDA                    CF2      3.9    6.4°         3.9
+  KK196                   CF3      4.0    8.2°         4.0
+  LEDA                    CF2      4.2   10.0°         4.2
+  KK189                   CF3      4.2    4.6°         4.2
+  IC4316                  CF3      4.3   12.1°         4.4
+  LEDA                    CF2      4.5   11.6°         4.5
+  ESO384-016              CF3      4.5   11.5°         4.6
+  DEP1337-33              CF3      4.5    8.6°         4.6
+  NGC5236                 CF3      4.7   10.9°         4.7
+  KK200                   CF3      4.8    8.4°         4.8
+  NGC5264                 CF3      4.8   11.6°         4.9
+  KK218                   CF3      4.9   12.3°         5.1
+  KK208                   CF3      5.0   11.1°         5.1
+  HIP1337-39              CF3      5.1    7.4°         5.1
+  IC4247                  CF3      5.2    9.2°         5.2
+  NGC5408                 CF3      5.3   12.5°         5.4
+  ESO444-78               CF3      5.4   11.3°         5.5
+  LEDA                    CF2      5.4   20.4°         5.8
+  ESO379-07               CF3      5.5   14.1°         5.6
+  ESO381-018              CF3      5.5    3.7°         5.5
+  ESO381-20               CF3      5.5    5.0°         5.5
+  ESO215-09               CF3      5.5   24.6°         6.0
+  HIP1133-32              CF3      5.6   18.5°         5.9
+  LEDA                    CF2      5.7    9.4°         5.7
+  LEDA                    CF2      5.7   13.0°         5.9
+  PG0045084               CF3      5.8   20.4°         6.2
+  ESO137-18               CF3      5.9   38.4°         7.5
+  Cen6                    CF3      5.9    2.4°         5.9
+  ESO443-09               CF3      6.0    9.6°         6.1
+  ESO320-14               CF3      6.0   16.3°         6.3
+  LEDA                    CF2      6.1   26.6°         6.9
+  ESO223-09               CF3      6.3   24.1°         6.9
+  LEDA                    CF2      6.5   17.5°         6.8
+  NGC005398               CF3      6.6   13.2°         6.8
+  NGC003621               CF3      6.7   21.5°         7.2
+  ESO376-016              CF3      6.9   27.1°         7.8
+  ESO318-013              CF3      6.9   26.0°         7.7
+  2MRS_210.84-41.38      2MRS      6.9   12.5°         7.1
+  ES270-017               CF3      7.0   10.0°         7.1
+  2MRS_204.25-29.87      2MRS      7.0   10.9°         7.2
+  2MRS_228.56-46.81      2MRS      7.2   26.0°         8.0
+  2MRS_203.43-48.15      2MRS      7.2   11.9°         7.4
+  NGC4765                 CF3      7.4   42.3°        10.0
+  2MRS_201.37-43.02      2MRS      7.5    7.0°         7.5
+  2MRS_196.36-49.47      2MRS      7.7   11.7°         7.9
+  NGC4600                 CF3      8.2   41.2°        10.9
+  2MRS_245.24-60.49      2MRS      8.3   38.4°        10.6
+  UGC07694                CF3      8.8   38.5°        11.2
+  2MRS_192.49+5.31       2MRS      8.9   43.2°        12.2
+  2MRS_199.73-21.04      2MRS      9.2   17.2°         9.6
+  ES373-008               CF3      9.7   42.0°        13.0
+  NGC4948                 CF3      9.7   29.9°        11.2
+  ESO265-007              CF3      9.7   22.5°        10.5
+  ESO505-013              CF3      9.7   19.0°        10.3
+  2MRS_193.31+4.46       2MRS      9.8   42.3°        13.3
+  2MRS_169.57-32.81      2MRS      9.9   21.5°        10.6
+  2MRS_192.30+3.39       2MRS      9.9   41.3°        13.1
+  UGC07035                CF3      9.9   42.6°        13.5
+  2MRS_190.63+3.96       2MRS     10.1   42.0°        13.6
+  LEDA                    CF2     10.2   15.3°        10.6
+  PGC045195               CF3     10.3   34.3°        12.5
+  NGC4597                 CF3     10.4   32.4°        12.3
+  2MRS_193.95+4.30       2MRS     10.4   42.2°        14.0
+  ES440-046               CF3     10.6   15.3°        11.0
+  2MRS_189.62+4.32       2MRS     10.7   42.5°        14.5
+  2MRS_191.27+3.06       2MRS     10.8   41.1°        14.3
+  NGC4532                 CF3     10.8   44.7°        15.2
+  2MRS_208.36+5.21       2MRS     11.0   44.7°        15.5
+  ESO440-044              CF3     11.3   14.9°        11.7
+  NGC004594               CF3     11.3   26.6°        12.6
+  2MRS_203.70-45.55      2MRS     11.3   10.0°        11.5
+  N4802                   CF3     11.6   25.8°        12.9
+  ... (11144 weitere Objekte)
+
+=======================================================
+STATISTIK (11244 Galaxien):
+  Median R_Thales   :      119.0 Mpc
+  Mittelwert        :      134.4 Mpc
+  Std               :       85.9 Mpc
+  Std/Median        : 0.722
+  Cluster ±50%      : 5984/11244 = 53%
+
+  Distanz-Bereich   : 1.3 – 905.3 Mpc
+  HTM r_s           : 4228.3 Mpc
+  Median/r_s        : 0.0281  (2.81%)
+
+NACH DISTANZ-DEKADE (alle Kataloge kombiniert):
+        Dekade      N   Median-R        Std    Cl25%
+  --------------------------------------------------
+  d=   0–5     Mpc      40         3.8         0.7  35/40
+  d=   5–15    Mpc     130        14.3         4.6  68/130
+  d=  15–50    Mpc    1918        41.7        10.9  1242/1918
+  d=  50–100   Mpc    3441        85.8        20.1  2340/3441
+  d= 100–200   Mpc    4176       161.6        36.7  3055/4176
+  d= 200–500   Mpc    1534       270.6        66.3  1255/1534
+  d= 500–1000  Mpc       5       803.4       270.7  3/5
+
+HTM FRAKTALSCHALEN (theta0=58.65°, r_s=4228 Mpc):
+  n=1  R_n=     689 Mpc  N=    8 Objekte
+  n=2  R_n=    1378 Mpc  N=    1 Objekte
+  n=3  R_n=    2067 Mpc  N=    0 Objekte
+  n=4  R_n=    2755 Mpc  N=    0 Objekte
+  n=5  R_n=    3444 Mpc  N=    0 Objekte
+  n=6  R_n=    4133 Mpc  N=    0 Objekte
+  n=7  R_n=    4822 Mpc  N=    0 Objekte
+
+INTERPRETATION:
+  Hohe Streuung (Std/Med=0.722) — R_Thales skaliert mit d.
+  Lokale Kataloge reichen nicht fuer Vakuumschalen-Test.
+  Katalog-Limit: 905 Mpc  |  Benoetigt fuer r_s: z ~ 1.03
+  Naechster testbarer Schalen-Kandidat: r_s * (58.65/360) = 689 Mpc
+
+INTERPRETATION:
+  Satz des Thales: Wenn alle Galaxien auf einer Schale liegen,

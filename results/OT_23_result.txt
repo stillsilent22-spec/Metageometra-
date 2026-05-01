@@ -1,0 +1,38 @@
+======================================================================
+OT-23: Kosmische Voids vs HTM-Schalenwinkel
+======================================================================
+
+  Katalog:        Sutter+2012 (J/MNRAS/431/2307) [3435 Voids]
+  Voids gesamt:   3435
+  Schalen:        n*58.65 Grad, n=1..6
+  HTM-Dipol-Pol:  l=305.0, b=25.0
+
+----------------------------------------------------------------------
+Statistik
+----------------------------------------------------------------------
+
+  Anteil Voids nahe Schale (<10 Grad): 38.2%
+  Erwartet (uniform):                  34.1%
+
+  KS-Test (2-Stichproben vs Null):      D = 0.0750,  p = 0.0000
+  Chi2-Test (6 Bins):                   chi2 = 149.22,  p = 0.0000
+
+  Bin breakdown (Delta-Schale):
+    [0.0-5.0] Grad:   639 beob, 528.9 erw  (+20.8%)
+    [5.0-10.0] Grad:   672 beob, 533.8 erw  (+25.9%)
+    [10.0-15.0] Grad:   556 beob, 533.2 erw  (+4.3%)
+    [15.0-20.0] Grad:   414 beob, 537.9 erw  (-23.0%)
+    [20.0-25.0] Grad:   359 beob, 536.9 erw  (-33.1%)
+    [25.0-29.3] Grad:   492 beob, 461.4 erw  (+6.6%)
+
+----------------------------------------------------------------------
+BEWERTUNG
+----------------------------------------------------------------------
+
+  OT-23 POSITIV: Voids haefen sich signifikant bei HTM-Schalenabstaenden
+  (KS p=0.0000, Chi2 p=0.0000).
+
+  VORSICHT: Selektionseffekte? SDSS-Footprint nicht uniform.
+  Der HTM-Pol liegt bei l=305, b=25 — Galaktische Ebene schneidet SDSS.
+
+======================================================================

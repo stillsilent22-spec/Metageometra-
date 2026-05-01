@@ -1,0 +1,24 @@
+════════════════════════════════════════════════════════════
+OT-13 Rev.3: SRM Eigenmode-Spektrum — Survey-bereinigt (V21.3)
+════════════════════════════════════════════════════════════
+r_s = 1.3053e+21 m = 42.3 kpc
+D_eff = 0.3333
+SMBHs (Signal) = 97  |  Milliquas (BG) = 3000
+Methode: SMBH-Überschuss vs Survey-Hintergrund (nicht isotrop)
+
+Schalenüberschuss δ_n = (N_obs - N_exp) / sqrt(N_exp):
+  n=1  θ=59.11°  N_obs=7  N_exp=2.81  δ=+2.50
+  n=2  θ=118.18°  N_obs=2  N_exp=3.10  δ=-0.63
+  n=3  θ=175.96°  N_obs=3  N_exp=0.36  δ=+4.43
+  n=4  θ=123.51°  N_obs=3  N_exp=5.66  δ=-1.12
+  n=5  θ=64.60°  N_obs=1  N_exp=6.18  δ=-2.08
+  n=6  θ=8.07°  N_obs=1  N_exp=2.39  δ=-0.90
+
+Log-Log Fit Steigung: 0.5229
+Erwartung (n^-D_eff): -0.3333
+Abweichung:           0.8562
+
+[Methode 1 sin²-Moden Steigung: 0.0088 — falsche Observable, nur Ref.]
+
+Status: INCONCLUSIVE
+════════════════════════════════════════════════════════════

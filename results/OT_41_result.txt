@@ -1,0 +1,27 @@
+════════════════════════════════════════════════════════════════
+OT-41: 4-Arm Helix chi/3 Theorem — BESTAETIGT (V21.0)
+OT-28: Spin-Alternierung — BESTAETIGT (V21.2)
+════════════════════════════════════════════════════════════════
+chi = 59.1°  |  chi/3 = 19.7000°
+Base-Az = 88.0°
+
+Arm-Azimute:
+  Arm 1: Az=88.00°  Spin=A (prograd)  Partner=Arm 3
+  Arm 2: Az=107.70°  Spin=B (retrograd)  Partner=Arm 4
+  Arm 3: Az=268.00°  Spin=A (prograd)  Partner=Arm 1
+  Arm 4: Az=287.70°  Spin=B (retrograd)  Partner=Arm 2
+
+Spin-Bestaetigungen (OT-28):
+  Arm | Az   | Objekt       | Spin_obs  | Grp | Status
+    1|  88° | HTM-OT21-A   | prograd   | A   | VORHERGESAGT (OT-28)
+    2| 108° | Sgr A*       | prograd   | A   | BESTAETIGT (EHT 2022)
+    3| 268° | NGC 1052     | retrograd | B   | BESTAETIGT (Baczko 2016)
+    3| 268° | NGC 0315     | prograd   | A   | BESTAETIGT (Daly 2023)
+    4| 288° | NGC 2273     | retrograd | B   | VORHERGESAGT (OT-28)
+    4| 288° | NGC 6251     | retrograd | B   | VORHERGESAGT (OT-28)
+
+Bestaetigt: 3/3 beobachtbare Objekte
+
+OT-41 Status: BESTAETIGT
+OT-28 Status: BESTAETIGT
+════════════════════════════════════════════════════════════════

@@ -1,0 +1,21 @@
+SATZ DES THALES — Vakuumschalen-Radius
+============================================================
+
+D-Pol: l=305.0, b=25.0
+Methode: R_Thales = d / cos(theta_D)
+
+N Objekte:        47
+Median R_Thales:  86.7 Mpc
+Std-Abw:          1266.5 Mpc
+r_s (HTM):        4228.3 Mpc
+R_Thales / r_s:   0.0205
+
+Naechste SMBHs zum D-Pol:
+  M 81                   theta=21.3°  d=3.6 Mpc  R=3.9 Mpc
+  NGC 2273               theta=27.3°  d=26.4 Mpc  R=29.7 Mpc
+  UGC 3789               theta=29.1°  d=45.5 Mpc  R=52.1 Mpc
+  M 106                  theta=44.6°  d=7.6 Mpc  R=10.7 Mpc
+  NGC 1281               theta=45.6°  d=59.9 Mpc  R=85.5 Mpc
+  NGC 1275               theta=45.7°  d=71.4 Mpc  R=102.2 Mpc
+  NGC 1271               theta=45.8°  d=84.5 Mpc  R=121.3 Mpc
+  M 31                   theta=46.7°  d=0.8 Mpc  R=1.2 Mpc

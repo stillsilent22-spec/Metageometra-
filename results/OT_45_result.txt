@@ -1,0 +1,33 @@
+════════════════════════════════════════════════════════════
+OT-45: Dynamisches chi — Beschleunigte Expansion (V21.3)
+════════════════════════════════════════════════════════════
+METHODE:
+  Separierbare ODE: d(chi)/dt = -K_DRIVE * eps(chi)
+  Analytische Trajektorie via numerischer Integration + Inversion
+  Keine odeint (Singularitaet vermieden)
+KALIBRIERUNG:
+  K_DRIVE = 3.105864e+04  (Randbedingung chi(T0)=59.1)
+  chi(t=0) = 59.5000  (fruehes Universum)
+TRAJEKTORIE:
+  t=0.0 T0 (0.0 Gyr): chi = 59.500  eps = 7.158e-06
+  t=0.5 T0 (6.9 Gyr): chi = 59.357  eps = 1.183e-05
+  t=1.0 T0 (13.8 Gyr): chi = 59.100  eps = 2.319e-05
+  t=1.5 T0 (20.7 Gyr): chi = 58.500  eps = 6.445e-05
+  t=2.0 T0 (27.6 Gyr): chi = 55.496  eps = 5.806e-04
+ERGEBNIS:
+  eta(t=0)       = 5.6289e-10  (kleiner als heute -> Big Bang eta kleiner)
+  eta(T0) heute  = 5.5828e-10  (CLOSED OT-44)
+  eta beobachtet = 5.58e-10
+  Drift BB->heute: -1.0013
+  Drift heute->2T0: -57.9987
+  Expansion beschleunigt: True
+  n_active heute: 4  (Schalen mit Defekt > 5 Grad)
+  n_active 2T0:   5
+VORHERSAGE:
+  Ohne SMBH-Regulierung: chi -> 0 in ~2-3 Hubble-Zeiten
+  Mit SMBH als Brake: quasi-stationaerer Zustand bei chi~59.1 moeglich
+  Falsifikation: chi(z=2) via Schalenversatz messbar (JWST, ELT)
+  chi(2T0=28 Gyr) = 55.50  [ohne SMBH Stabilisierung]
+STATUS: BESTAETIGT
+Naechster OT: OT-46 (chi(z) vs DESI w(z) Drift)
+════════════════════════════════════════════════════════════

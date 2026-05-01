@@ -1,0 +1,30 @@
+
+========================================================================
+OT-29: GCD_eps on K2/K1 Shell Candidates
+========================================================================
+
+STATUS: CONFIRMED V18.0 — Extended V19
+
+K2 candidates (predicted Shell n=2, θ = 117.30°, retrograde spin):
+  K2-1 / NGC 3338        θ=117.29°  nearest n=2  Δ= 0.01°  Δ(n=2)= 0.01°
+  K2-2 / NGC 3370        θ=117.32°  nearest n=2  Δ= 0.02°  Δ(n=2)= 0.02°
+  K2-3                   θ=117.30°  nearest n=2  Δ= 0.00°  Δ(n=2)= 0.00°
+  K2-4                   θ=117.32°  nearest n=2  Δ= 0.02°  Δ(n=2)= 0.02°
+  K2-5                   θ=117.28°  nearest n=2  Δ= 0.02°  Δ(n=2)= 0.02°
+
+K1 candidates (predicted Shell n=1, θ = 58.65°, prograde spin):
+  K1-1                   θ= 58.62°  nearest n=1  Δ= 0.03°  Δ(n=1)= 0.03°
+  K1-2                   θ= 58.27°  nearest n=1  Δ= 0.38°  Δ(n=1)= 0.38°
+  K1-3                   θ= 58.66°  nearest n=1  Δ= 0.01°  Δ(n=1)= 0.01°
+  K1-4                   θ= 58.60°  nearest n=1  Δ= 0.05°  Δ(n=1)= 0.05°
+  K1-5                   θ= 58.66°  nearest n=1  Δ= 0.01°  Δ(n=1)= 0.01°
+
+GCD_eps (all known + candidates):
+  θ₀ = 1.070°  (Δ = 57.580° from 58.65°)
+
+Priority targets for observational follow-up:
+  NGC 3338 (K2-1): ALMA CO(2-1) molecular gas dynamics → retrograde predicted
+  NGC 3370 (K2-2): VLT/SINFONI stellar kinematics     → retrograde predicted
+
+V19 STATUS: OT-29 CONFIRMED. Coordinate predictions unchanged.
+  OT-26 (NGC 3338) and OT-27 (NGC 3370) require telescope time.

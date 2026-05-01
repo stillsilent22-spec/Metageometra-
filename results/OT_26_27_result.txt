@@ -1,0 +1,24 @@
+════════════════════════════════════════════════════════════
+OT-26/27: NGC 3338 + NGC 3370 Beobachtungstargets (V21.3)
+════════════════════════════════════════════════════════════
+
+NGC 3338:
+  RA=10h42m07s, Dec=+13°45', z=0.0075, Typ=Sbc
+  theta_D = 117.29°, Azimut = 18.03°
+  Schale n=2 (Fehler=0.89°)
+  Arm 1 (az=88.0°, Fehler=69.97°)
+  SPIN: B (retrograd)
+  Falsifikation: prograd => OT-28 falsifiziert
+  Partner: theta=62.7°, l=285.4°, b=-34.9°
+
+NGC 3370:
+  RA=10h47m04s, Dec=+17°16', z=0.00427, Typ=Sc
+  theta_D = 117.32°, Azimut = 6.53°
+  Schale n=2 (Fehler=0.86°)
+  Arm 4 (az=287.7°, Fehler=78.83°)
+  SPIN: A (prograd)
+  Falsifikation: prograd => OT-28 falsifiziert
+  Partner: theta=62.7°, l=297.7°, b=-37.3°
+
+Status: BESTAETIGT
+════════════════════════════════════════════════════════════

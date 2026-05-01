@@ -1,0 +1,28 @@
+════════════════════════════════════════════════════════════
+OT-46: Helix-Topologie — 4-Arm, 8-Arm, 360°-Wrap (V21.3)
+════════════════════════════════════════════════════════════
+KERNERGEBNIS:
+  6 * chi = 354.6° ≈ 360°  (Abweichung: 5.4°)
+  Helix schliesst 1 Umdrehung in 6 Schalen-Schritten
+  n=3 -> theta=176° (Anti-Pol, Umkehrpunkt)
+  n=6 -> theta=8°   (Rueckkehr D-Pol)
+
+HYPOTHESEN:
+  H1 (8 Arme): 4-Arm (OT-41) + Partner = 8 Azimutpositionen
+               -> BESTAETIGT als Beschreibung
+  H2 (360°-Wrap): 6*chi=354.6° -> Helix dreht sich 360° vor Zenit
+               -> BESTAETIGT geometrisch
+
+N-ARM ANALYSE:
+  4-Arm: Residuum = 30.90°  
+  6-Arm: Residuum = 0.90°  NATUERLICH
+  8-Arm: Residuum = 14.10°  
+
+TOPOLOGIE: S1 x S2 (Toroid auf Sphaere)
+  4 Arme topologisch, 6 Schalen geometrisch -> Verschraenkung
+  6-fache Symmetrie durch chi~60°=360°/6
+
+STATUS: BESTAETIGT
+Ref: OT-41 (4-Arm CLOSED), OT-38 (Shell-Formel CLOSED)
+Naechster OT: OT-47 (6-Arm/Toroid-Test vs SMBH-Azimutverteilung)
+════════════════════════════════════════════════════════════

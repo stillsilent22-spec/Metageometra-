@@ -1,0 +1,48 @@
+======================================================================
+OT-30: Gravitationswellen-Ereignisse vs HTM-Schalenstruktur
+======================================================================
+
+TORSIONSSCHOCK-HYPOTHESE:
+  Falls BBH/BNS-Merger bevorzugt an HTM-Schalengrenzen stattfinden
+  (S3 Topologie-Energie-Minima an theta_n = n*58.65 Grad),
+  sollten GWTC-Ereignisse nahe den Schalenrichtungen clustern.
+
+  Analyse: 15 GWTC-Ereignisse
+  Nahe Schalen (<10.0 Grad):  6  (erwartet isotropisch: 4.8)
+  Ferne Schalen (>=10.0 Grad): 9
+
+----------------------------------------------------------------------
+STATISTISCHE TESTS
+----------------------------------------------------------------------
+
+  Binomial-Test (nahe vs Raumwinkel-Erwartung): p = 0.5800
+  KS-Test (Delta_shell vs isotrope MC-Null):    p = 0.3506
+  Mann-Whitney (schwere vs leichte Merger):     p = 0.9538
+
+----------------------------------------------------------------------
+BEWERTUNG
+----------------------------------------------------------------------
+
+  OT-30: KEIN SIGNIFIKANTES CLUSTERING (p_binom = 0.580)
+  Beobachtet/Erwartet = 6/4.8 = 1.26x
+
+  Mit der derzeitigen Stichprobe (n=15 Ereignisse)
+  ist kein GW-Clustering an HTM-Schalen nachweisbar.
+  Obere Schranke auf Clustering-Amplitude: ~2-3x bei 95% CI.
+
+  WICHTIGER VERGLEICH:
+  GW-Stochastischer Hintergrund: Omega_GW ~ 5.8e-9
+  rho_GW / rho_DE = 0.0000
+  => GW-Schocks sind kleine Perturbation auf L, nicht die Quelle.
+
+NEUESTE BEMERKENS­WERTE EREIGNISSE:
+  GW231123 (23.11.2023): MASSIVSTES BBH je — 100+140 -> 225+ M_sun (IMBH)!
+  GW250114 (14.01.2025): HOECHSTE SNR je — 34+32 M_sun, klarstes Signal
+  O4-Run: ~220 Ereignisse total (Stand 2026)
+
+V19-AUFGABE:
+  Formale Definition der HTM-Torsionsschock-Rate notwendig.
+  Vergleich mit LIGO O4 vollstaendigem Katalog (GWTC-4.1).
+  Sky-position posterior sampling benoetigt (lokalisierungsbedingte Verzerrung).
+
+======================================================================

@@ -1,0 +1,32 @@
+====================================================================
+OT-17: CMB-Anomalien und kosmische Ausrichtungen vs D-Pol
+====================================================================
+
+D-Pol: l=305.0°, b=25.0° (aus M31/M33-Geometrie abgeleitet)
+
+  Anomalie                        l      b   Dist_D-Pol   Shell-D  Nah?
+  ---------------------------------------------------------------------------
+  CMB Cold Spot               207.8  -56.3       114.50°      2.80°  (*nahe Schale)
+  CMB Dipol-Achse             264.0   48.3        39.60°     19.05°  
+  CMB Low-ell Asymm.          225.0  -18.0        88.91°     28.39°  
+  CMB Quadrupol-Achse         240.0  -63.0       101.69°     15.61°  
+  CMB Oktopol-Achse           308.0   63.0        38.05°     20.60°  
+  Bulk Flow                   282.0   11.0        25.90°     32.75°  
+  Great Attractor             307.0   18.0         7.24°     51.41°  *** NAEHER (<15°)
+  Shapley Supercluster        306.4   29.7         4.86°     53.79°  *** NAEHER (<15°)
+
+HERVORHEBUNGEN:
+  Shapley Supercluster: 4.86° vom D-Pol → sehr nah (<5°)!
+  Great Attractor:      7.24° vom D-Pol → sehr nah (<8°)!
+
+INTERPRETATION:
+  D-Pol ~ Shapley/Great-Attractor: interessant, aber POST-HOC.
+  D-Pol wurde aus M31/M33-Winkelgeometrie abgeleitet, NICHT aus Shapley.
+  Koinzidenz moeglich: Lokale Massenkonzentration koennte AUCH M31-Orbits
+  beeinflusst haben (Gravitationszug), was die Geometrie erklaert.
+  CMB Oktopol-Achse (308°, 63°): 39.9° vom D-Pol — nicht nah.
+  Andere CMB-Anomalien: keine systematische D-Pol-Ausrichtung.
+
+  OT-17 STATUS: TEILWEISE — Shapley-Koinzidenz bemerkenswert,
+  statistisch nicht gesichert ohne CMB-Anomalie-Vollkataiog.
+====================================================================

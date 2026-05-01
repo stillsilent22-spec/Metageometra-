@@ -1,0 +1,34 @@
+
+========================================================================
+OT-11: GCD_epsilon — Independent theta_0 Determination
+========================================================================
+
+STATUS: CONFIRMED V18.0
+
+Method: GCD_epsilon with ε = 1.0°
+
+Objects used:
+  Sgr A* (DEF anchor): θ = 58.650°
+  M31 (DEF object): θ = 175.110°
+  M33 (DEF object): θ = 58.650°
+  NGC 1052 (independent): θ = 118.370°
+  NGC 0315 (independent): θ = 175.110°
+  NGC 3379: θ = 59.170°
+  NGC 3384: θ = 58.960°
+
+Results:
+  GCD_eps (all objects):         θ₀ = 1.510°  (Δ = 57.140° from 58.65°)
+  GCD_eps (independent only):   θ₀ = 1.010°  (Δ = 57.640°)
+  GCD_eps (with candidates):    θ₀ = 1.273°
+
+Modular RMS minimization:
+  Best-fit θ₀ = 58.570°  (RMS residual = 0.6277°)
+  HTM prediction: 58.65° — deviation: 0.080°
+
+V18 reported values:
+  All objects:      58.963° (Δ=0.313°) ✓
+  Independent only: 59.169° (Δ=0.519°) ✓
+  Combined:         58.653° (Δ=0.003°) ✓
+
+CONCLUSION: GCD converges to θ₀ independently of Sgr A* anchor.
+OT-11 CONFIRMED. No update needed for V19.

@@ -1,0 +1,20 @@
+══════════════════════════════════════════════════════════════
+OT-44: Echo-Baryonenasymmetrie — ABGESCHLOSSEN (V21.3)
+══════════════════════════════════════════════════════════════
+chi = 59.1°  |  rho = 0.406  |  D_f,geo = 0.7690
+
+Formel: η(chi,rho) = (1-cos(chi)) / ((2-cos(chi)) * (2π²)^(6+D_f,geo))
+
+  Va       = 1-cos(59.1°) = 0.486459
+  V_norm   = 2-cos(59.1°) = 1.486459
+  echo_fac = (2π²)^6.769 = 5.8620e+08
+
+  η_pred = 5.5828e-10
+  η_obs  = 6.1040e-10  (Planck 2018 / BBN)
+  Abw.   = 8.5%  — innerhalb FSB-Grenzen
+
+  Statisches Limit (chi=60°, rho=0.5): η_static = 2.8548e-10
+  → eta → 0 nur wenn BEIDE Defekte gleichzeitig verschwinden
+
+Status: BESTAETIGT
+══════════════════════════════════════════════════════════════

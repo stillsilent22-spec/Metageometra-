@@ -1,0 +1,104 @@
+========================================================================
+  OT-39: V20 Schalenformel vs. SMBH-Katalog (N=97)
+========================================================================
+
+  V20: delta=1.0 deg   chi=59.1 deg
+
+  Vorhergesagte Schalenwinkel:
+    n=1: theta = 59.11 deg
+    n=2: theta = 118.18 deg
+    n=3: theta = 175.96 deg
+    n=4: theta = 123.51 deg
+    n=5: theta = 64.60 deg
+    n=6: theta = 8.07 deg
+
+  Katalog: 97 SMBHs geladen
+
+------------------------------------------------------------------------
+   Schale    theta  Treffer  Objekte
+------------------------------------------------------------------------
+  n=1  theta= 59.11        9  NGC 3489, NGC 3384, NGC 3379, Sgr A*, NGC 3377, NGC 3842, NGC 3608, M 85, NGC 4350
+  n=2  theta=118.18        5  UGC 3789, NGC 2748, NGC 1600, NGC 1300, NGC 4291
+  n=3  theta=175.96        4  M 32, M 31, NGC 404, NGC 315
+  n=4  theta=123.51        4  NGC 2273, NGC 6251, NGC 1550, NGC 1052
+  n=5  theta= 64.60        4  NGC 4889, NGC 2960, NGC 4278, NGC 3227
+  n=6  theta=  8.07        2  NGC 5128, NGC 4751
+
+  Gesamt: 28 Treffer / 97 SMBHs
+
+------------------------------------------------------------------------
+   Schale  Name              theta_obs  theta_pred   Delta
+------------------------------------------------------------------------
+  n=1  NGC 3489             58.966      59.105   -0.14 deg
+  n=1  NGC 3384             59.266      59.105   +0.16 deg
+  n=1  NGC 3379             59.281      59.105   +0.18 deg
+  n=1  Sgr A*               58.653      59.105   -0.45 deg
+  n=1  NGC 3377             60.510      59.105   +1.40 deg
+  n=1  NGC 3842             60.546      59.105   +1.44 deg
+  n=1  NGC 3608             61.081      59.105   +1.98 deg
+  n=1  M 85                 56.644      59.105   -2.46 deg
+  n=1  NGC 4350             55.215      59.105   -3.89 deg
+  n=2  UGC 3789            119.676     118.181   +1.49 deg
+  n=2  NGC 2748            119.685     118.181   +1.50 deg
+  n=2  NGC 1600            114.994     118.181   -3.19 deg
+  n=2  NGC 1300            114.120     118.181   -4.06 deg
+  n=2  NGC 4291            113.400     118.181   -4.78 deg
+  n=3  M 32                175.352     175.965   -0.61 deg
+  n=3  M 31                175.092     175.965   -0.87 deg
+  n=3  NGC 404             177.283     175.965   +1.32 deg
+  n=3  NGC 315             172.491     175.965   -3.47 deg
+  n=4  NGC 2273            123.626     123.507   +0.12 deg
+  n=4  NGC 6251            123.114     123.507   -0.39 deg
+  n=4  NGC 1550            122.441     123.507   -1.07 deg
+  n=4  NGC 1052            128.323     123.507   +4.82 deg
+  n=5  NGC 4889             65.811      64.604   +1.21 deg
+  n=5  NGC 2960             62.124      64.604   -2.48 deg
+  n=5  NGC 4278             67.790      64.604   +3.19 deg
+  n=5  NGC 3227             68.535      64.604   +3.93 deg
+  n=6  NGC 5128              6.973       8.066   -1.09 deg
+  n=6  NGC 4751              5.066       8.066   -3.00 deg
+
+========================================================================
+  MULTI-TOLERANZ-SCAN
+========================================================================
+
+    TOL   Hits   E[Rand]   Ueber      p-Wert  Bewertung
+  -----------------------------------------------------------------
+    1.0      8       6.3    +1.7     0.29324  
+    2.0     17      12.2    +4.8     0.09968  *
+    3.0     20      17.9    +2.1     0.32506  
+    5.0     28      28.2    -0.2     0.55269  
+
+========================================================================
+  VERTEILUNGSTEST: Residuen |theta_obs - theta_naechste_Schale|
+========================================================================
+
+  Residuum <  5 deg :   28 beob  ( 28.2 erwartet)  Ratio=0.99
+  Residuum 5-10 deg :   23 beob  ( 21.0 erwartet)  Ratio=1.10
+  Residuum > 10 deg :   46 beob
+
+  Binomialtest (< 5 deg Zone): p = 0.55269
+  Median Residuum: 9.50 deg
+  Mean  Residuum: 10.79 deg
+  Unter H0: E[mean Residuum] ~ 7.5 deg
+  Beobachtet: 10.79 deg  (kleiner = besser, Ratio = 1.44)
+
+========================================================================
+  OT-39 VERDICT
+========================================================================
+
+  V20-Schalenformel (delta=1.0, chi=59.1):
+  Bestes Ergebnis bei TOL=2.0 deg:
+    Treffer: 17/97  |  Erwartet: 12.2  |  p=0.09968
+
+  => GRENZWERTIG (p < 0.10) — Trend sichtbar
+
+  Residuum-Test: mean=10.79 deg (H0: 7.5 deg)
+    Ratio = 1.44  (< 1.0 = Schalen-Signal)
+
+  Interpretation:
+  Mit 97 SMBHs und 6 breiten Schalen ist die Trennkraft begrenzt.
+  Die ±5 deg Toleranz deckt 33% des Himmels ab — zu grob.
+  Die Schalen-Cluster n=1 (9 Hits) und n=4 (4 Hits) zeigen Struktur.
+  Fazit: V20 nicht widerlegt, aber noch nicht bewiesen.
+========================================================================

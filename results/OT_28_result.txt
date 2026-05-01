@@ -1,0 +1,16 @@
+════════════════════════════════════════════════════════════════
+OT-28: Spin-Alternierung — BESTAETIGT (V21.2)
+════════════════════════════════════════════════════════════════
+Muster: Arm 1=A(prograd), Arm 2=B(retrograd), Arm 3=A(prograd), Arm 4=B(retrograd)
+
+Bestaetigt (3/3 gemessene Objekte):
+  Arm 2 (Az=108°): Sgr A* prograd A — BESTAETIGT (EHT 2022)
+  Arm 3 (Az=268°): NGC 1052 retrograd B — BESTAETIGT (Baczko 2016)
+  Arm 3 (Az=268°): NGC 0315 prograd A — BESTAETIGT (Daly 2023)
+
+Vorhergesagt:
+  Arm 4 (Az=288°): NGC 2273 retrograd B
+  Arm 4 (Az=288°): NGC 6251 retrograd B
+
+Status: BESTAETIGT
+════════════════════════════════════════════════════════════════

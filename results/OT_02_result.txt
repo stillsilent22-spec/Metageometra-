@@ -1,0 +1,151 @@
+======================================================================
+OT-2: f_echo Analytische Verifikation (V19)
+======================================================================
+
+Framework-Formel:
+  f_echo = exp(D_f,eff * N)  mit D_f,eff = 0.3388
+  N = ln(rho_early / rho_DE) ~ 274
+  f_echo = exp(0.3388 * 274) = exp(92.83) = 2.0705e+40
+
+  D_f,eff = D_f,geo * D_f,diss = 0.77 * 0.44 = 0.3388
+
+----------------------------------------------------------------------
+PFAD A: Thermodynamisches Dichtevaeltnis
+----------------------------------------------------------------------
+  T_reh = 10^9 GeV  (Leptogenese): N = 193.7  (Delta = -80.3)
+  T_reh = 10^14 GeV (GUT): N = 239.8  (Delta = -34.2)
+  T_reh = 10^15 GeV (Standard GUT): N = 249.0  (Delta = -25.0)
+  T_reh = 10^16 GeV (hohe Inflation): N = 258.2  (Delta = -15.8)
+  T_Planck = 1.416e32 K: N = 286.6  (Delta = +12.6)
+
+  Referenz-Match: T_reh = 10^15 GeV (Standard GUT), N = 249.0
+  Abweichung: -25.0  (9.1%)
+
+----------------------------------------------------------------------
+PFAD B: Baryon-Asymmetrie Rueckrechnung
+----------------------------------------------------------------------
+  tau_infl = 10^-36 s (Ende Inflation): N = 302.1  (Delta = +28.1)
+  tau_infl = 10^-32 s (Friedmann start): N = 274.9  (Delta = +0.9)
+  tau_infl = 10^-33 s (GUT Übergang): N = 281.7  (Delta = +7.7)
+  tau_infl = 10^-38 s (Planck Grenze): N = 315.7  (Delta = +41.7)
+
+  Referenz-Match: tau = 10^-32 s (GUT-Inflation Ende), N = 274.9
+
+----------------------------------------------------------------------
+PFAD C: Planck-Dichte (parameterfrei)
+----------------------------------------------------------------------
+
+  rho_Planck = c^5 / (hbar * G^2) = 5.1558e+96 kg/m^3
+  N_C = ln(rho_Planck / rho_DE) = 283.06  (Delta = +9.06)
+  Interpretation: Planck-Dichte liefert obere Schranke; N=274 liegt
+  unterhalb N_C = 283.1, was physikalisch plausibel ist.
+
+----------------------------------------------------------------------
+FRIEDMANN-KONSISTENZ
+----------------------------------------------------------------------
+
+  Fuer jede T_reh ergibt die Friedmann-Gleichung eine konsistente tau_F:
+
+  T_reh                                             N_A         tau_F  N_B(tau_F)
+  ------------------------------------------------------------------------------
+  T_reh = 10^9 GeV  (Leptogenese)                 193.7      2.34e-25       224.8
+  T_reh = 10^14 GeV (GUT)                         239.8      2.34e-35       292.8
+  T_reh = 10^15 GeV (Standard GUT)                249.0      2.34e-37       306.4
+  T_reh = 10^16 GeV (hohe Inflation)              258.2      2.34e-39       319.9
+  T_Planck = 1.416e32 K                           286.6      1.57e-45       361.9
+
+  Hinweis: tau_infl = 10^-32 s ist Friedmann-inkonsistent mit T_reh=10^15 GeV.
+  Konsistente tau bei T_GUT: ~10^-37 s (5 Groessenordnungen kleiner).
+
+----------------------------------------------------------------------
+T_EXAKT: welche T_reh ergibt exakt N=274?
+----------------------------------------------------------------------
+
+  rho_target = rho_DE * exp(274) = 5.9882e+92 kg/m^3
+  T_exact    = 5.2075e+17 GeV
+  T_exact / T_Planck = 0.1069  (nahe Planck-Skala)
+  tau_Friedmann(T_exact) = 8.641e-43 s
+  N_B(tau_exact) = 343.28  (Pfad-B-Wert bei tau_exact; soll 274)
+
+  Pfad A-Konsistenz: T=5.21e+17 GeV ergibt N_A=274 per Konstruktion.
+  Pfad B-Inkonsistenz: N_B(tau_exact)=343 != 274 (Pfad B versagt hier).
+  -> Kein (T_reh, tau) Paar erfuellt beide Pfade gleichzeitig (Friedmann-konform).
+
+----------------------------------------------------------------------
+UNSICHERHEITSANALYSE (Pfad B)
+----------------------------------------------------------------------
+
+  Quelle        Rel.Unsicherheit  Delta_N (1sigma)
+  eta_obs       +/-0.6%             +/-0.0
+  H0 (-> t0)    +/-1.5%             +/-0.0
+  tau_infl      x3 (Faktor)         +/-3.2  (dominiert)
+
+  N_B(10^-32 s) = 274.89
+  tau-Band (x3): N = 274.9 +/- 3.2
+  N=274 liegt INNERHALB des 1sigma-Bandes  (|Delta_N|=0.9 vs +/-3.2)
+
+----------------------------------------------------------------------
+DREI-PFAD KONSISTENZ
+----------------------------------------------------------------------
+
+  N = 274 (Framework-Wert)
+  Pfad A (T_GUT = 10^15 GeV): N_A = 249.0  Delta = -25.0  (9.1%)
+  Pfad B (tau  = 10^-32  s):  N_B = 274.9  Delta = +0.9  (0.3%)
+  Pfad C (Planck-Dichte):     N_C = 283.1  Delta = +9.1  (3.3%)
+  Bracket: N_A=249 < N=274 < N_C=283  [N liegt zwischen GUT und Planck]
+
+----------------------------------------------------------------------
+BEWERTUNG
+----------------------------------------------------------------------
+
+  OT-2 BESTANDEN: Beide Referenz-Pfade stimmen innerhalb 15% ueberein.
+  Delta(A-B) = -25.9  (9.5% von 274)
+
+  VORBEHALT: Pfad A und Pfad B sind Friedmann-inkonsistent miteinander.
+  tau=10^-32 s und T=10^15 GeV entsprechen nicht dem gleichen Weltzeitalter.
+
+----------------------------------------------------------------------
+PFAD D: DM-Echo-Wellenasymmetrie + S3-pi-Unterdrueckung (V20)
+Idee: Kevin Hannemann, 28.04.2026
+----------------------------------------------------------------------
+
+  Wenn DM = HTM-Echo (Rueckwaertswelle, rho-gedaempft):
+  Baryon-Asymmetrie = Asymmetrie Vorwaerts/Rueckwaertswelle
+  untergedrueckt durch S3->R3 Phasenraumreduktion via pi.
+
+  Schritt 1 — Rohe Wellenasymmetrie:
+    eta_roh = (1-rho)/(1+rho) = 0.5940/1.4060 = 0.4225
+
+  Schritt 2 — S3-Phasenraumvolumen:
+    (2*pi^2)^N_shells = (19.739)^6 = 5.9153e+07
+
+  Schritt 3 — Nach S3-Unterdrueckung (N_shells=6):
+    eta_D = rho*(1-rho) / (2*pi^2)^6 = 4.0769e-09
+    Verhaeltnis zu eta_obs: 6.7x (noch zu gross)
+
+  Schritt 4 — Dualitaetssphaere-Korrekturfaktor pi:
+    eta_final = rho*(1-rho) / ((2*pi^2)^6 * pi)
+              = 1.2977e-09
+    eta_obs   = 6.1040e-10
+    Abweichung: 113%  (kein freier Parameter)
+
+  Vorteil Pfad D: KEIN tau_infl als freier Parameter!
+  Roh-Asymmetrie + S3-Geometrie -> korrekte Groessenordnung eta
+  N_D (Rueckrechnung) = 277.1  (Framework: 274, Delta=+3.1)
+
+  STATUS: Pfad D liefert eta ~ 1e-09 = korrekte Groessenordnung  (V20 KANDIDAT)
+
+----------------------------------------------------------------------
+EPISTEMISCHER STATUS (V19/V20)
+----------------------------------------------------------------------
+
+  N=274 = ln(rho_early/rho_DE) ist eine dimensionslose Zahl.
+  Pfad B (tau=10^-32 s) reproduziert N=274.9 mit <1% Abweichung.
+  Pfad C (Planck-Dichte) ergibt N_C=283.1 -- N=274 liegt darunter (plausibel).
+  T_exact = 5.21e+17 GeV loest N_A=274 exakt (= 0.11 T_Planck).
+  Aber: N_B(tau bei T_exact) = 343 != 274 (Pfad-B-Versagen bei Friedmann-tau).
+  Kritisch: Kein Friedmann-konsistentes (T, tau) Paar loest beide Pfade gleichzeitig.
+  Pfad B mit tau=10^-32 s und Pfad A mit T_GUT=10^15 GeV sind epistemisch entkoppelt.
+  Gesamtstatus: BEDINGT -- Pfad B trifft N=274 (Kalibrierung), Pfad A schwach, C als Bracket.
+
+======================================================================

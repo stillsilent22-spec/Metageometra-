@@ -1,0 +1,441 @@
+==========================================================================
+HTM KNOTENPUNKT GEOMETRIE-ANALYSE
+THETA0=58.65°  r_s=4228.3 Mpc  Pole=['D', 'A', 'S1', 'S2', 'S3', 'S4']
+Tol: ±8.0° (Schalen) | GK-RMS≤7.0° | 3D-RMS≤20.0 Mpc | Nachbar≤25.0°
+==========================================================================
+
+══ 1. SMBHs AN HTM-KNOTEN ══
+
+Alle 97 SMBHs nach Kreuzungsdichte:
+  nc=0 (auf keiner Schale):    37 SMBHs
+  nc=1 (1 Kreuzung):            43 SMBHs
+  nc=2 (2 Kreuzungen = Knoten): 17 SMBHs
+
+SMBHs mit nc ≥ 1 (auf mind. einer Schalen-Kreuzung):
+Name                       logM   nc     θ_D    d[Mpc]  Schalen-Hits
+------------------------------------------------------------------------------
+  NGC 4889                10.32   10   64.2°      91.1  D(n=1,δ=5.57°)  A(n=2,δ=1.52°)  S2(n=2,δ=4.25°)  S3(n=1,δ=4.4°)  S4(n=2,δ=0.35°)  R_Th=209→n=1±70%
+  NGC 7768                 9.10    6   61.3°         ?  D(n=1,δ=2.68°)  A(n=2,δ=1.37°)  S1(n=2,δ=0.83°)  S2(n=1,δ=3.22°)
+  NGC 4278                 8.62    6   62.6°       9.0  D(n=1,δ=3.93°)  A(n=2,δ=0.12°)  S1(n=1,δ=0.36°)  S2(n=2,δ=4.41°)  R_Th=20→n=1±97%
+  NGC 7052                 8.61    6   63.8°         ?  D(n=1,δ=5.17°)  A(n=2,δ=1.12°)  S3(n=1,δ=2.34°)  S4(n=2,δ=6.39°)
+  NGC 6264                 7.57    6   64.8°         ?  D(n=1,δ=6.16°)  A(n=2,δ=2.11°)  S1(n=2,δ=0.21°)  S2(n=1,δ=3.84°)
+  NGC 4762                 7.39    6   80.9°      22.6  S1(n=1,δ=7.17°)  S2(n=2,δ=3.12°)  S3(n=1,δ=7.57°)  S4(n=2,δ=3.52°)  R_Th=143→n=1±79%
+  M 60                     9.67    3   80.5°      17.6  S1(n=1,δ=4.88°)  S2(n=2,δ=0.83°)  S4(n=2,δ=5.71°)  R_Th=106→n=1±85%
+  NGC 4649                 9.67    3   80.5°      14.5  S1(n=1,δ=4.88°)  S2(n=2,δ=0.83°)  S4(n=2,δ=5.71°)  R_Th=88→n=1±87%
+  M 89                     8.67    3   79.4°      15.9  S1(n=1,δ=2.85°)  S2(n=2,δ=1.2°)  S4(n=2,δ=7.47°)  R_Th=87→n=1±87%
+  NGC 4552                 8.67    3   79.4°       3.9  S1(n=1,δ=2.85°)  S2(n=2,δ=1.2°)  S4(n=2,δ=7.47°)  R_Th=21→n=1±97%
+  M 59                     8.55    3   80.4°      16.0  S1(n=1,δ=4.47°)  S2(n=2,δ=0.42°)  S4(n=2,δ=6.08°)  R_Th=96→n=1±86%
+  NGC 4621                 8.55    3   80.4°       6.2  S1(n=1,δ=4.47°)  S2(n=2,δ=0.42°)  S4(n=2,δ=6.08°)  R_Th=37→n=1±95%
+  NGC 3585                 8.48    3  117.9°      20.1  D(n=2,δ=0.57°)  A(n=1,δ=3.48°)  S1(n=1,δ=4.09°)
+  NGC 4564                 7.87    3   80.6°      15.9  S1(n=1,δ=3.13°)  S2(n=2,δ=0.92°)  S4(n=2,δ=7.47°)  R_Th=97→n=1±86%
+  NGC 4596                 7.87    3   81.8°      16.5  S1(n=1,δ=4.09°)  S2(n=2,δ=0.04°)  S4(n=2,δ=6.84°)  R_Th=116→n=1±83%
+  NGC 4151                 7.12    3   52.4°         ?  D(n=1,δ=6.27°)  S1(n=1,δ=0.35°)  S2(n=2,δ=4.4°)
+  NGC 7457                 6.86    3   58.9°         ?  D(n=1,δ=0.24°)  A(n=2,δ=3.81°)  S2(n=1,δ=4.13°)
+  NGC 1600                10.23    1   92.3°      67.2  S1(n=1,δ=1.22°)  S2(n=2,δ=2.83°)
+  M 87                     9.82    1   79.6°      16.4  S1(n=1,δ=1.68°)  S2(n=2,δ=2.37°)  R_Th=90→n=1±87%
+  NGC 1277                 9.70    1   45.6°         ?  S3(n=2,δ=1.2°)  S4(n=1,δ=2.85°)
+  NGC 1550                 9.57    1   84.8°         ?  S1(n=1,δ=2.65°)  S2(n=2,δ=1.4°)
+  NGC 6086                 9.57    1   63.3°         ?  D(n=1,δ=4.66°)  A(n=2,δ=0.61°)
+  NGC 1271                 9.43    1   45.8°      84.5  S3(n=2,δ=1.3°)  S4(n=1,δ=2.75°)  R_Th=121→n=1±82%
+  M 49                     9.40    1   83.9°      14.9  S1(n=1,δ=1.82°)  S2(n=2,δ=2.23°)  R_Th=141→n=1±80%
+  NGC 315                  9.08    1   57.5°         ?  D(n=1,δ=1.15°)  A(n=2,δ=5.2°)
+  NGC 1399                 9.00    1  122.6°         ?  D(n=2,δ=5.33°)  A(n=1,δ=1.28°)
+  NGC 524                  8.92    1   78.1°      34.6  S3(n=2,δ=0.86°)  S4(n=1,δ=4.91°)  R_Th=168→n=1±76%
+  NGC 5077                 8.90    1  105.0°         ?  S3(n=1,δ=7.19°)  S4(n=2,δ=3.14°)
+  NGC 1275                 8.89    1   45.7°      71.4  S3(n=2,δ=1.24°)  S4(n=1,δ=2.81°)  R_Th=102→n=1±85%
+  NGC 3998                 8.82    1   36.2°         ?  S1(n=1,δ=3.36°)  S2(n=2,δ=0.69°)
+  NGC 6251                 8.78    1   10.2°         ?  A(n=3,δ=6.18°)  S4(n=2,δ=7.22°)
+  NGC 1374                 8.77    1  122.4°         ?  D(n=2,δ=5.1°)  A(n=1,δ=1.05°)
+  NGC 4486B                8.72    1   79.5°      16.4  S1(n=1,δ=1.61°)  S2(n=2,δ=2.44°)  R_Th=90→n=1±87%
+  M 84                     8.71    1   79.0°      17.9  S1(n=1,δ=0.25°)  S2(n=2,δ=3.8°)  R_Th=94→n=1±86%
+  NGC 4261                 8.70    1   86.0°      31.6  S1(n=1,δ=0.48°)  S2(n=2,δ=4.53°)  R_Th=454→n=1±34%
+  NGC 4342                 8.65    1   84.8°      16.0  S1(n=1,δ=0.42°)  S2(n=2,δ=3.63°)  R_Th=177→n=1±74%
+  NGC 4526                 8.65    1   84.3°       8.0  S1(n=1,δ=2.9°)  S2(n=2,δ=1.15°)  R_Th=80→n=1±88%
+  NGC 4350                 8.48    1   75.2°      16.8  S1(n=1,δ=0.16°)  S2(n=2,δ=4.21°)  R_Th=66→n=1±90%
+  NGC 307                  8.31    1   89.6°      56.7  S1(n=2,δ=5.24°)  S3(n=2,δ=4.47°)
+  NGC 3245                 8.30    1   62.1°         ?  D(n=1,δ=3.48°)  A(n=2,δ=0.57°)
+  NGC 4026                 8.26    1   40.7°         ?  S1(n=1,δ=1.65°)  S2(n=2,δ=2.4°)
+  NGC 1281                 8.17    1   45.6°      59.9  S3(n=2,δ=1.18°)  S4(n=1,δ=2.87°)  R_Th=85→n=1±88%
+  NGC 5252                 8.15    1   87.9°         ?  S3(n=1,δ=2.25°)  S4(n=2,δ=6.3°)
+  M 85                     7.99    1   73.7°      17.0  S1(n=1,δ=0.17°)  S2(n=2,δ=3.88°)  R_Th=61→n=1±91%
+  NGC 4339                 7.96    1   85.8°      16.0  S1(n=1,δ=0.52°)  S2(n=2,δ=3.53°)  R_Th=218→n=1±68%
+  NGC 4473                 7.96    1   78.5°      15.2  S1(n=1,δ=1.37°)  S2(n=2,δ=2.68°)  R_Th=77→n=1±89%
+  NGC 4459                 7.85    1   78.0°      16.0  S1(n=1,δ=1.15°)  S2(n=2,δ=2.9°)  R_Th=77→n=1±89%
+  NGC 2778                 7.83    1   54.7°         ?  D(n=1,δ=3.94°)  A(n=2,δ=7.99°)
+  M 81                     7.80    1   21.3°       3.6  S1(n=1,δ=2.79°)  S2(n=2,δ=1.26°)  R_Th=4→n=1±99%
+  NGC 4435                 7.80    1   78.8°      11.7  S1(n=1,δ=0.87°)  S2(n=2,δ=3.18°)  R_Th=60→n=1±91%
+  NGC 1023                 7.62    1   48.2°         ?  S3(n=2,δ=1.74°)  S4(n=1,δ=5.79°)
+  M 106                    7.58    1   44.6°       7.6  S1(n=1,δ=3.35°)  S2(n=2,δ=0.7°)  R_Th=11→n=1±98%
+  NGC 4434                 7.54    1   83.8°         ?  S1(n=1,δ=1.27°)  S2(n=2,δ=2.78°)
+  NGC 4246                 7.50    1   84.6°         ?  S1(n=1,δ=1.0°)  S2(n=2,δ=5.05°)
+  NGC 4371                 7.49    1   80.2°      13.4  S1(n=1,δ=0.29°)  S2(n=2,δ=3.76°)  R_Th=79→n=1±89%
+  NGC 4387                 7.25    1   79.1°         ?  S1(n=1,δ=0.41°)  S2(n=2,δ=3.64°)
+  NGC 7332                 7.12    1   65.5°         ?  D(n=1,δ=6.85°)  A(n=2,δ=2.8°)
+  NGC 2960                 7.06    1   86.5°         ?  S3(n=2,δ=2.95°)  S4(n=1,δ=7.0°)
+  NGC 4388                 6.93    1   79.2°      35.6  S1(n=1,δ=0.44°)  S2(n=2,δ=3.61°)  R_Th=191→n=1±72%
+  Sgr A*                   6.61    1  121.4°       0.0  D(n=2,δ=4.09°)  A(n=1,δ=0.04°)
+
+
+══ 2. GROßKREIS-KOLLINEARITÄT (alle SMBHs, nc ≥ 1) ══
+Getestete Kombinationen: 34220  |  GK-Alignments (RMS≤7.0°): 13677
+
+Top-25 Großkreis-Alignments:
+
+  [1] NGC 4278 | M 49 | NGC 4435  (n=3)
+       GK-Normal: l=216.0°, b=6.7°  RMS=0.00°  *** GK-NORMAL nahe [('S3', 18.3), ('S4', 161.7)]!
+       Winkelsep: 21.4° → 5.1°
+       logM:  ['8.6', '9.4', '7.8']  nc: [6, 1, 1]  Residuen: [0.0, 0.0, 0.0]°
+
+  [2] NGC 4278 | NGC 4486B | NGC 4026  (n=3)
+       GK-Normal: l=218.1°, b=6.6°  RMS=0.00°  *** GK-NORMAL nahe [('S3', 18.7), ('S4', 161.3)]!
+       Winkelsep: 17.0° → 39.0°
+       logM:  ['8.6', '8.7', '8.3']  nc: [6, 1, 1]  Residuen: [0.0, 0.0, 0.0]°
+
+  [3] NGC 4151 | M 87 | NGC 315  (n=3)
+       GK-Normal: l=218.9°, b=6.7°  RMS=0.00°  *** GK-NORMAL nahe [('S3', 18.7), ('S4', 161.3)]!
+       Winkelsep: 27.4° → 136.8°
+       logM:  ['7.1', '9.8', '9.1']  nc: [3, 1, 1]  Residuen: [0.0, 0.0, 0.01]°
+
+  [4] M 49 | M 85 | NGC 4435  (n=3)
+       GK-Normal: l=36.0°, b=-6.7°  RMS=0.00°  *** GK-NORMAL nahe [('S3', 161.7), ('S4', 18.3)]!
+       Winkelsep: 10.2° → 5.1°
+       logM:  ['9.4', '8.0', '7.8']  nc: [1, 1, 1]  Residuen: [0.01, 0.01, 0.0]°
+
+  [5] NGC 5077 | NGC 4526 | NGC 4371  (n=3)
+       GK-Normal: l=59.0°, b=-12.8°  RMS=0.00°
+       Winkelsep: 23.3° → 4.6°  [Δ≈[4.6]° ≈ n×58.65°]
+       logM:  ['8.9', '8.7', '7.5']  nc: [1, 1, 1]  Residuen: [0.0, 0.0, 0.0]°
+
+  [6] NGC 3998 | NGC 4434 | NGC 4388  (n=3)
+       GK-Normal: l=215.6°, b=7.1°  RMS=0.00°  *** GK-NORMAL nahe [('S3', 17.9), ('S4', 162.1)]!
+       Winkelsep: 47.7° → 4.5°  [Δ≈[4.5]° ≈ n×58.65°]
+       logM:  ['8.8', '7.5', '6.9']  nc: [1, 1, 1]  Residuen: [0.01, 0.0, 0.0]°
+
+  [7] NGC 4526 | M 85 | NGC 4459  (n=3)
+       GK-Normal: l=41.5°, b=-7.5°  RMS=0.00°  *** GK-NORMAL nahe [('S3', 161.4), ('S4', 18.6)]!
+       Winkelsep: 10.7° → 4.3°  [Δ≈[4.3]° ≈ n×58.65°]
+       logM:  ['8.7', '8.0', '7.8']  nc: [1, 1, 1]  Residuen: [0.01, 0.0, 0.0]°
+
+  [8] NGC 4889 | NGC 3585 | NGC 4473  (n=3)
+       GK-Normal: l=186.5°, b=-1.3°  RMS=0.01°
+       Winkelsep: 60.4° → 44.3°  [Δ≈[60.4]° ≈ n×58.65°]
+       logM:  ['10.3', '8.5', '8.0']  nc: [10, 3, 1]  Residuen: [0.01, 0.01, 0.0]°
+
+  [9] NGC 7768 | NGC 6264 | NGC 5077  (n=3)
+       GK-Normal: l=169.2°, b=-34.6°  RMS=0.01°
+       Winkelsep: 88.3° → 66.5°
+       logM:  ['9.1', '7.6', '8.9']  nc: [6, 6, 1]  Residuen: [0.01, 0.01, 0.01]°
+
+  [10] NGC 4278 | M 59 | M 81  (n=3)
+       GK-Normal: l=226.8°, b=6.1°  RMS=0.01°
+       Winkelsep: 18.4° → 63.2°  [Δ≈[63.2]° ≈ n×58.65°]
+       logM:  ['8.6', '8.6', '7.8']  nc: [6, 3, 1]  Residuen: [0.01, 0.01, 0.02]°
+
+  [11] NGC 4278 | NGC 4621 | M 81  (n=3)
+       GK-Normal: l=226.8°, b=6.1°  RMS=0.01°
+       Winkelsep: 18.4° → 63.2°  [Δ≈[63.2]° ≈ n×58.65°]
+       logM:  ['8.6', '8.6', '7.8']  nc: [6, 3, 1]  Residuen: [0.01, 0.01, 0.02]°
+
+  [12] NGC 7052 | M 59 | NGC 1399  (n=3)
+       GK-Normal: l=161.6°, b=-10.7°  RMS=0.01°
+       Winkelsep: 117.6° → 133.6°  [Δ≈[117.6]° ≈ n×58.65°]
+       logM:  ['8.6', '8.6', '9.0']  nc: [6, 3, 1]  Residuen: [0.01, 0.01, 0.01]°
+
+  [13] NGC 7052 | NGC 4621 | NGC 1399  (n=3)
+       GK-Normal: l=161.6°, b=-10.7°  RMS=0.01°
+       Winkelsep: 117.6° → 133.6°  [Δ≈[117.6]° ≈ n×58.65°]
+       logM:  ['8.6', '8.6', '9.0']  nc: [6, 3, 1]  Residuen: [0.01, 0.01, 0.01]°
+
+  [14] NGC 4278 | M 49 | M 85  (n=3)
+       GK-Normal: l=216.0°, b=6.7°  RMS=0.01°  *** GK-NORMAL nahe [('S3', 18.3), ('S4', 161.7)]!
+       Winkelsep: 21.4° → 10.2°
+       logM:  ['8.6', '9.4', '8.0']  nc: [6, 1, 1]  Residuen: [0.01, 0.01, 0.0]°
+
+  [15] NGC 4278 | NGC 315 | NGC 4526  (n=3)
+       GK-Normal: l=38.8°, b=-6.6°  RMS=0.01°  *** GK-NORMAL nahe [('S3', 161.2), ('S4', 18.8)]!
+       Winkelsep: 119.7° → 141.5°  [Δ≈[119.7]° ≈ n×58.65°]
+       logM:  ['8.6', '9.1', '8.7']  nc: [6, 1, 1]  Residuen: [0.01, 0.01, 0.01]°
+
+  [16] NGC 4278 | M 84 | NGC 4350  (n=3)
+       GK-Normal: l=213.7°, b=6.8°  RMS=0.01°  *** GK-NORMAL nahe [('S3', 18.2), ('S4', 161.8)]!
+       Winkelsep: 16.4° → 3.8°  [Δ≈[3.8]° ≈ n×58.65°]
+       logM:  ['8.6', '8.7', '8.5']  nc: [6, 1, 1]  Residuen: [0.01, 0.0, 0.0]°
+
+  [17] NGC 4278 | NGC 4026 | NGC 4473  (n=3)
+       GK-Normal: l=38.0°, b=-6.6°  RMS=0.01°  *** GK-NORMAL nahe [('S3', 161.4), ('S4', 18.6)]!
+       Winkelsep: 22.0° → 38.0°
+       logM:  ['8.6', '8.3', '8.0']  nc: [6, 1, 1]  Residuen: [0.01, 0.02, 0.01]°
+
+  [18] NGC 4278 | M 85 | NGC 4435  (n=3)
+       GK-Normal: l=216.0°, b=6.7°  RMS=0.01°  *** GK-NORMAL nahe [('S3', 18.3), ('S4', 161.7)]!
+       Winkelsep: 11.2° → 5.1°
+       logM:  ['8.6', '8.0', '7.8']  nc: [6, 1, 1]  Residuen: [0.01, 0.0, 0.01]°
+
+  [19] M 89 | NGC 4596 | NGC 5077  (n=3)
+       GK-Normal: l=234.4°, b=9.1°  RMS=0.01°
+       Winkelsep: 2.6° → 24.9°  [Δ≈[2.6]° ≈ n×58.65°]
+       logM:  ['8.7', '7.9', '8.9']  nc: [3, 3, 1]  Residuen: [0.0, 0.0, 0.02]°
+
+  [20] M 89 | NGC 4596 | M 85  (n=3)
+       GK-Normal: l=234.2°, b=9.0°  RMS=0.01°
+       Winkelsep: 2.6° → 8.8°  [Δ≈[2.6]° ≈ n×58.65°]
+       logM:  ['8.7', '7.9', '8.0']  nc: [3, 3, 1]  Residuen: [0.0, 0.01, 0.02]°
+
+  [21] NGC 4552 | NGC 4596 | NGC 5077  (n=3)
+       GK-Normal: l=234.4°, b=9.1°  RMS=0.01°
+       Winkelsep: 2.6° → 24.9°  [Δ≈[2.6]° ≈ n×58.65°]
+       logM:  ['8.7', '7.9', '8.9']  nc: [3, 3, 1]  Residuen: [0.0, 0.0, 0.02]°
+
+  [22] NGC 4552 | NGC 4596 | M 85  (n=3)
+       GK-Normal: l=234.2°, b=9.0°  RMS=0.01°
+       Winkelsep: 2.6° → 8.8°  [Δ≈[2.6]° ≈ n×58.65°]
+       logM:  ['8.7', '7.9', '8.0']  nc: [3, 3, 1]  Residuen: [0.0, 0.01, 0.02]°
+
+  [23] M 59 | M 49 | NGC 4339  (n=3)
+       GK-Normal: l=173.5°, b=-8.2°  RMS=0.01°
+       Winkelsep: 4.7° → 2.5°  [Δ≈[4.7, 2.5]° ≈ n×58.65°]
+       logM:  ['8.6', '9.4', '8.0']  nc: [3, 1, 1]  Residuen: [0.02, 0.01, 0.01]°
+
+  [24] NGC 4621 | M 49 | NGC 4339  (n=3)
+       GK-Normal: l=173.5°, b=-8.2°  RMS=0.01°
+       Winkelsep: 4.7° → 2.5°  [Δ≈[4.7, 2.5]° ≈ n×58.65°]
+       logM:  ['8.6', '9.4', '8.0']  nc: [3, 1, 1]  Residuen: [0.02, 0.01, 0.01]°
+
+  [25] NGC 4596 | NGC 315 | M 106  (n=3)
+       GK-Normal: l=37.3°, b=-4.3°  RMS=0.01°
+       Winkelsep: 139.2° → 101.9°
+       logM:  ['7.9', '9.1', '7.6']  nc: [3, 1, 1]  Residuen: [0.01, 0.01, 0.01]°
+
+
+══ 2b. 4+-OBJEKT ALIGNMENTS (nur nc≥2 SMBHs, vollständig) ══
+  Hochdichte SMBHs (nc≥2): 17  → ['NGC 4889', 'NGC 7768', 'NGC 4278', 'NGC 7052', 'NGC 6264', 'NGC 4762', 'M 60', 'NGC 4649', 'M 89', 'NGC 4552', 'M 59', 'NGC 4621', 'NGC 3585', 'NGC 4564', 'NGC 4596', 'NGC 4151', 'NGC 7457']
+  Gefundene 4+-Alignments (RMS≤7.0°): 633
+
+  Top-20 Hochdichte-Alignments (n≥4):
+
+  [1] NGC 4278 | M 89 | NGC 4596 | NGC 4151  (n=4)
+       GK-Normal: l=224.1°, b=6.7°  RMS=0.69°
+       Winkelsep: 17.1° → 2.6° → 30.0°
+       logM: ['8.6', '8.7', '7.9', '7.1']  nc: [6, 3, 3, 3]  Residuen: [0.46, 0.04, 0.43, 1.22]°
+
+  [2] NGC 4278 | NGC 4552 | NGC 4596 | NGC 4151  (n=4)
+       GK-Normal: l=224.1°, b=6.7°  RMS=0.69°
+       Winkelsep: 17.1° → 2.6° → 30.0°
+       logM: ['8.6', '8.7', '7.9', '7.1']  nc: [6, 3, 3, 3]  Residuen: [0.46, 0.04, 0.43, 1.22]°
+
+  [3] NGC 4889 | M 89 | NGC 3585 | NGC 7457  (n=4)
+       GK-Normal: l=185.8°, b=-3.6°  RMS=1.35°
+       Winkelsep: 16.4° → 44.1° → 175.7°  [Δ≈[175.7]° ≈ n×58.65°]
+       logM: ['10.3', '8.7', '8.5', '6.9']  nc: [10, 3, 3, 3]  Residuen: [2.28, 0.36, 0.63, 1.27]°
+
+  [4] NGC 4889 | NGC 4552 | NGC 3585 | NGC 7457  (n=4)
+       GK-Normal: l=185.8°, b=-3.6°  RMS=1.35°
+       Winkelsep: 16.4° → 44.1° → 175.7°  [Δ≈[175.7]° ≈ n×58.65°]
+       logM: ['10.3', '8.7', '8.5', '6.9']  nc: [10, 3, 3, 3]  Residuen: [2.28, 0.36, 0.63, 1.27]°
+
+  [5] NGC 4889 | NGC 3585 | NGC 4564 | NGC 7457  (n=4)
+       GK-Normal: l=186.0°, b=-3.9°  RMS=1.56°
+       Winkelsep: 60.4° → 43.2° → 132.5°  [Δ≈[60.4]° ≈ n×58.65°]
+       logM: ['10.3', '8.5', '7.9', '6.9']  nc: [10, 3, 3, 3]  Residuen: [2.57, 0.91, 0.01, 1.53]°
+
+  [6] NGC 6264 | NGC 4762 | M 89 | NGC 4596  (n=4)
+       GK-Normal: l=151.2°, b=-12.8°  RMS=1.60°
+       Winkelsep: 59.3° → 4.4° → 2.6°  [Δ≈[59.3]° ≈ n×58.65°]
+       logM: ['7.6', '7.4', '8.7', '7.9']  nc: [6, 6, 3, 3]  Residuen: [2.11, 1.42, 1.73, 0.86]°
+
+  [7] NGC 6264 | NGC 4762 | NGC 4552 | NGC 4596  (n=4)
+       GK-Normal: l=151.2°, b=-12.8°  RMS=1.60°
+       Winkelsep: 59.3° → 4.4° → 2.6°  [Δ≈[59.3]° ≈ n×58.65°]
+       logM: ['7.6', '7.4', '8.7', '7.9']  nc: [6, 6, 3, 3]  Residuen: [2.11, 1.42, 1.73, 0.86]°
+
+  [8] NGC 7052 | NGC 4762 | M 89 | NGC 4596  (n=4)
+       GK-Normal: l=159.1°, b=-11.4°  RMS=1.69°
+       Winkelsep: 115.8° → 4.4° → 2.6°  [Δ≈[115.8]° ≈ n×58.65°]
+       logM: ['8.6', '7.4', '8.7', '7.9']  nc: [6, 6, 3, 3]  Residuen: [2.16, 1.71, 1.83, 0.71]°
+
+  [9] NGC 7052 | NGC 4762 | NGC 4552 | NGC 4596  (n=4)
+       GK-Normal: l=159.1°, b=-11.4°  RMS=1.69°
+       Winkelsep: 115.8° → 4.4° → 2.6°  [Δ≈[115.8]° ≈ n×58.65°]
+       logM: ['8.6', '7.4', '8.7', '7.9']  nc: [6, 6, 3, 3]  Residuen: [2.16, 1.71, 1.83, 0.71]°
+
+  [10] NGC 4889 | M 59 | NGC 3585 | NGC 7457  (n=4)
+       GK-Normal: l=186.4°, b=-4.4°  RMS=2.03°
+       Winkelsep: 16.9° → 44.0° → 175.7°  [Δ≈[175.7]° ≈ n×58.65°]
+       logM: ['10.3', '8.6', '8.5', '6.9']  nc: [10, 3, 3, 3]  Residuen: [3.03, 0.55, 1.55, 2.15]°
+
+  [11] NGC 4889 | NGC 4621 | NGC 3585 | NGC 7457  (n=4)
+       GK-Normal: l=186.4°, b=-4.4°  RMS=2.03°
+       Winkelsep: 16.9° → 44.0° → 175.7°  [Δ≈[175.7]° ≈ n×58.65°]
+       logM: ['10.3', '8.6', '8.5', '6.9']  nc: [10, 3, 3, 3]  Residuen: [3.03, 0.55, 1.55, 2.15]°
+
+  [12] NGC 7768 | NGC 7052 | NGC 3585 | NGC 7457  (n=4)
+       GK-Normal: l=153.6°, b=-44.3°  RMS=2.03°
+       Winkelsep: 33.9° → 154.4° → 175.7°  [Δ≈[175.7]° ≈ n×58.65°]
+       logM: ['9.1', '8.6', '8.5', '6.9']  nc: [6, 6, 3, 3]  Residuen: [0.99, 3.38, 1.3, 1.55]°
+
+  [13] NGC 4889 | NGC 3585 | NGC 4596 | NGC 7457  (n=4)
+       GK-Normal: l=186.3°, b=-4.5°  RMS=2.05°
+       Winkelsep: 60.4° → 42.5° → 133.2°  [Δ≈[60.4]° ≈ n×58.65°]
+       logM: ['10.3', '8.5', '7.9', '6.9']  nc: [10, 3, 3, 3]  Residuen: [3.15, 1.48, 0.67, 2.08]°
+
+  [14] NGC 4889 | NGC 4762 | M 89 | NGC 4596  (n=4)
+       GK-Normal: l=208.6°, b=0.9°  RMS=2.08°
+       Winkelsep: 16.8° → 4.4° → 2.6°
+       logM: ['10.3', '7.4', '8.7', '7.9']  nc: [10, 6, 3, 3]  Residuen: [2.72, 2.38, 1.91, 0.74]°
+
+  [15] NGC 4889 | NGC 4762 | NGC 4552 | NGC 4596  (n=4)
+       GK-Normal: l=208.6°, b=0.9°  RMS=2.08°
+       Winkelsep: 16.8° → 4.4° → 2.6°
+       logM: ['10.3', '7.4', '8.7', '7.9']  nc: [10, 6, 3, 3]  Residuen: [2.72, 2.38, 1.91, 0.74]°
+
+  [16] NGC 7768 | NGC 6264 | NGC 3585 | NGC 7457  (n=4)
+       GK-Normal: l=164.5°, b=-35.1°  RMS=2.12°
+       Winkelsep: 88.3° → 98.9° → 175.7°  [Δ≈[175.7]° ≈ n×58.65°]
+       logM: ['9.1', '7.6', '8.5', '6.9']  nc: [6, 6, 3, 3]  Residuen: [2.42, 3.08, 1.55, 0.53]°
+
+  [17] NGC 4889 | M 60 | NGC 3585 | NGC 7457  (n=4)
+       GK-Normal: l=186.6°, b=-4.5°  RMS=2.20°
+       Winkelsep: 16.9° → 44.1° → 175.7°  [Δ≈[175.7]° ≈ n×58.65°]
+       logM: ['10.3', '9.7', '8.5', '6.9']  nc: [10, 3, 3, 3]  Residuen: [3.2, 0.74, 1.76, 2.35]°
+
+  [18] NGC 4889 | NGC 4649 | NGC 3585 | NGC 7457  (n=4)
+       GK-Normal: l=186.6°, b=-4.5°  RMS=2.20°
+       Winkelsep: 16.9° → 44.1° → 175.7°  [Δ≈[175.7]° ≈ n×58.65°]
+       logM: ['10.3', '9.7', '8.5', '6.9']  nc: [10, 3, 3, 3]  Residuen: [3.2, 0.74, 1.76, 2.35]°
+
+  [19] NGC 4889 | NGC 7768 | M 89 | NGC 4596  (n=4)
+       GK-Normal: l=21.6°, b=-0.2°  RMS=2.27°
+       Winkelsep: 122.4° → 138.8° → 2.6°
+       logM: ['10.3', '9.1', '8.7', '7.9']  nc: [10, 6, 3, 3]  Residuen: [1.95, 3.96, 0.73, 0.72]°
+
+  [20] NGC 4889 | NGC 7768 | NGC 4552 | NGC 4596  (n=4)
+       GK-Normal: l=21.6°, b=-0.2°  RMS=2.27°
+       Winkelsep: 122.4° → 138.8° → 2.6°
+       logM: ['10.3', '9.1', '8.7', '7.9']  nc: [10, 6, 3, 3]  Residuen: [1.95, 3.96, 0.73, 0.72]°
+
+
+══ 3. THALES-SPHÄREN-KANDIDATEN (aus Galaxien-Katalog) ══
+
+  n=1  R_n=689 Mpc:  2 Galaxien (±10%),  1 davon an HTM-Knoten (nc≥1)
+    2MRS_184.08+5.50      2MRS  d=  468Mpc  R_Th=   657Mpc  δ=4.6%  nc=1  [S3(n=1,δ=1.2°)  S4(n=2,δ=5.25°)]
+    ➜ Nächste SMBHs innerhalb 25.0° dieser Thales-Kandidaten:
+      M 106                  logM=7.58  nc=1  θ_D=44.6°  sep=14.3°
+      NGC 4026               logM=8.26  nc=1  θ_D=40.7°  sep=17.2°
+      NGC 3998               logM=8.82  nc=1  θ_D=36.2°  sep=17.9°
+      NGC 4151               logM=7.12  nc=3  θ_D=52.4°  sep=18.8°
+      NGC 4889               logM=10.32  nc=10  θ_D=64.2°  sep=21.7°
+      NGC 4278               logM=8.62  nc=6  θ_D=62.6°  sep=24.7°
+    *** GK für benachbarte SMBHs bei n=1: ['NGC 3998', 'NGC 4026', 'NGC 4151', 'M 106', 'NGC 4278', 'NGC 4889']  RMS=3.02°
+
+  n=2  R_n=1378 Mpc:  1 Galaxien (±10%),  1 davon an HTM-Knoten (nc≥1)
+    2MRS_257.04-50.74     2MRS  d=  905Mpc  R_Th=  1273Mpc  δ=7.6%  nc=6  [S1(n=1,δ=5.01°)  S2(n=2,δ=0.96°)  S3(n=2,δ=5.03°)  S4(n=1,δ=0.98°)]
+    ➜ Nächste SMBHs innerhalb 25.0° dieser Thales-Kandidaten:
+      NGC 1281               logM=8.17  nc=1  θ_D=45.6°  sep=10.0°
+      NGC 1277               logM=9.70  nc=1  θ_D=45.6°  sep=10.1°
+      NGC 1275               logM=8.89  nc=1  θ_D=45.7°  sep=10.1°
+      NGC 1271               logM=9.43  nc=1  θ_D=45.8°  sep=10.2°
+      NGC 1023               logM=7.62  nc=1  θ_D=48.2°  sep=18.0°
+    *** GK für benachbarte SMBHs bei n=2: ['NGC 1023', 'NGC 1277', 'NGC 1271', 'NGC 1281', 'NGC 1275']  RMS=1.65°
+
+  n=3  R_n=2067 Mpc:  0 Galaxien (±10%),  0 davon an HTM-Knoten (nc≥1)
+
+  n=4  R_n=2755 Mpc:  0 Galaxien (±10%),  0 davon an HTM-Knoten (nc≥1)
+
+  n=5  R_n=3444 Mpc:  0 Galaxien (±10%),  0 davon an HTM-Knoten (nc≥1)
+
+  n=6  R_n=4133 Mpc:  0 Galaxien (±10%),  0 davon an HTM-Knoten (nc≥1)
+
+  n=7  R_n=4822 Mpc:  0 Galaxien (±10%),  0 davon an HTM-Knoten (nc≥1)
+
+
+══ 4. 3D-FILAMENT-TEST (SMBHs mit Distanz + nc ≥ 1) ══
+SMBHs mit nc≥1 und Distanz: 21
+Getestete 3D-Kombinationen: 7315  |  Filamente (RMS≤20.0 Mpc): 5951
+
+Top-15 3D-Filamente:
+  [M 106, NGC 4339, NGC 4278, NGC 4371]
+    Richtung l=115.3°, b=43.4°  RMS=0.1 Mpc  Δ(D-Pol-Achse)=69.0°
+    Residuen: [0.1, 0.1, 0.1, 0.1] Mpc
+  [NGC 4261, NGC 4339, NGC 4526, NGC 4552]
+    Richtung l=280.8°, b=-66.1°  RMS=0.1 Mpc  Δ(D-Pol-Achse)=87.0°
+    Residuen: [0.1, 0.1, 0.2, 0.2] Mpc
+  [Sgr A*, NGC 4371, NGC 4552, NGC 4388]
+    Richtung l=98.5°, b=74.0°  RMS=0.1 Mpc  Δ(D-Pol-Achse)=79.5°
+    Residuen: [0.1, 0.2, 0.1, 0.2] Mpc
+  [Sgr A*, NGC 1271, NGC 1281, NGC 1275]
+    Richtung l=330.6°, b=-13.3°  RMS=0.1 Mpc  Δ(D-Pol-Achse)=45.7°
+    Residuen: [0.0, 0.2, 0.2, 0.1] Mpc
+  [NGC 4339, M 59, NGC 3585]
+    Richtung l=272.5°, b=21.2°  RMS=0.2 Mpc  Δ(D-Pol-Achse)=30.0°
+    Residuen: [0.2, 0.2, 0.0] Mpc
+  [M 59, NGC 4762, NGC 4371]
+    Richtung l=151.1°, b=71.1°  RMS=0.2 Mpc  Δ(D-Pol-Achse)=82.2°
+    Residuen: [0.2, 0.0, 0.2] Mpc
+  [M 81, NGC 1271, NGC 1281, NGC 1275]
+    Richtung l=330.9°, b=-15.7°  RMS=0.2 Mpc  Δ(D-Pol-Achse)=47.9°
+    Residuen: [0.0, 0.3, 0.3, 0.0] Mpc
+  [NGC 4261, NGC 4339, Sgr A*, NGC 4526]
+    Richtung l=281.2°, b=-67.0°  RMS=0.2 Mpc  Δ(D-Pol-Achse)=86.3°
+    Residuen: [0.1, 0.1, 0.3, 0.3] Mpc
+  [NGC 4261, NGC 4339, Sgr A*, NGC 4552]
+    Richtung l=282.3°, b=-66.9°  RMS=0.2 Mpc  Δ(D-Pol-Achse)=86.5°
+    Residuen: [0.2, 0.2, 0.3, 0.3] Mpc
+  [NGC 4339, Sgr A*, NGC 4526, NGC 4552]
+    Richtung l=285.8°, b=-67.5°  RMS=0.2 Mpc  Δ(D-Pol-Achse)=86.4°
+    Residuen: [0.2, 0.3, 0.2, 0.3] Mpc
+  [NGC 4261, Sgr A*, NGC 4526, NGC 4552]
+    Richtung l=280.9°, b=-66.7°  RMS=0.3 Mpc  Δ(D-Pol-Achse)=86.5°
+    Residuen: [0.0, 0.4, 0.3, 0.2] Mpc
+  [NGC 1271, NGC 1281, NGC 4552, NGC 1275]
+    Richtung l=150.0°, b=16.0°  RMS=0.3 Mpc  Δ(D-Pol-Achse)=47.7°
+    Residuen: [0.4, 0.4, 0.0, 0.0] Mpc
+  [NGC 4371, NGC 4526, NGC 4552, NGC 4388]
+    Richtung l=277.2°, b=-74.8°  RMS=0.3 Mpc  Δ(D-Pol-Achse)=78.6°
+    Residuen: [0.2, 0.4, 0.4, 0.0] Mpc
+  [NGC 4350, NGC 4278, NGC 4388]
+    Richtung l=285.3°, b=-70.0°  RMS=0.3 Mpc  Δ(D-Pol-Achse)=83.9°
+    Residuen: [0.4, 0.4, 0.0] Mpc
+  [NGC 4350, NGC 4371, NGC 4889]
+    Richtung l=77.1°, b=-85.0°  RMS=0.3 Mpc  Δ(D-Pol-Achse)=61.7°
+    Residuen: [0.4, 0.4, 0.0] Mpc
+
+
+══ 5. KOMBINIERTE SUPER-KNOTEN ══
+(nc ≥ 1 angular UND Thales-Sphäre <15%)
+  3 Galaxien an kombinierten Knoten
+
+  Name                   Src       d     R_n     δ%   nc  Schalen
+  -----------------------------------------------------------------
+  2MRS_184.08+5.50      2MRS     468     689    4.6%    1  [S3n1 S4n2]
+  2MRS_257.04-50.74     2MRS     905    1378    7.6%    6  [S1n1 S2n2 S3n2 S4n1]
+  2MRS_193.33+7.05      2MRS     439     689   10.0%    3  [S2n2 S3n1 S4n2]
+
+  SMBHs in der Nähe der Super-Knoten (≤15°):
+    M 106                  logM=7.58  nc=1  sep=5.0°
+    NGC 4026               logM=8.26  nc=1  sep=8.9°
+    NGC 1281               logM=8.17  nc=1  sep=10.0°
+    NGC 1277               logM=9.70  nc=1  sep=10.1°
+    NGC 1275               logM=8.89  nc=1  sep=10.1°
+    NGC 1271               logM=9.43  nc=1  sep=10.2°
+    NGC 4151               logM=7.12  nc=3  sep=10.4°
+    NGC 3998               logM=8.82  nc=1  sep=11.4°
+
+
+══ 6. GEOMETRISCHE INTERPRETATION ══
+
+  Gesamt SMBHs:          97
+  davon an Knoten nc≥1:  60
+  davon an Knoten nc≥2:  17
+
+  Großkreis-Alignments: 13677 (RMS ≤ 7.0°)
+
+  STÄRKSTES ALIGNMENT (3 SMBHs):
+    Objekte: NGC 4278 ↔ M 49 ↔ NGC 4435
+    GK-Normal: l=216.0°, b=6.7°
+    RMS = 0.00°  (≪ 7° = kollinear auf Großkreis)
+    Winkelabstände zwischen Objekten: [21.4, 5.1] °
+    *** Großkreis-Normal liegt nahe einem HTM-Pol: [('S3', 18.3), ('S4', 161.7)]
+    → Dieser Großkreis IST eine HTM-Schalen-Ebene!
+    Masseprofil: [8.6, 9.4, 7.8] — höchste Masse in Mitte
+
+==========================================================================

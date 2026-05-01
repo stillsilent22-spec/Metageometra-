@@ -1,0 +1,50 @@
+
+========================================================================
+OT-05: Shell Spectrum Statistical Evaluation
+========================================================================
+
+STATUS: EVALUATED V18.0 — Extended V19
+
+Catalog: 15 objects (12 independent)
+Shell tolerance: ±5.0°
+Shells tested: n=1: 58.6°, n=2: 117.3°, n=3: 175.9°, n=4: 234.6°, n=5: 293.2°, n=6: 351.9°
+
+Hit Analysis:
+  HIT Sgr A*                 θ= 58.65°  n=1  Δ= 0.00°  DEF
+  HIT M31                    θ=175.11°  n=3  Δ= 0.84°  DEF
+  HIT M33                    θ= 58.00°  n=1  Δ= 0.65°  DEF
+  HIT NGC 1052               θ=118.37°  n=2  Δ= 1.07°  indep
+  HIT NGC 0315               θ=175.11°  n=3  Δ= 0.84°  indep
+  HIT NGC 3379               θ= 59.17°  n=1  Δ= 0.52°  indep
+  HIT NGC 3384               θ= 58.96°  n=1  Δ= 0.31°  indep
+  HIT NGC 2960               θ= 58.70°  n=1  Δ= 0.05°  indep
+  HIT NGC 3351               θ= 59.10°  n=1  Δ= 0.45°  indep
+      M87 (NGC 4486)         θ= 50.70°  n=1  Δ= 7.95°  indep
+      Cen A (NGC 5128)       θ=  7.00°  n=1  Δ=51.65°  indep
+      NGC 4258               θ= 85.70°  n=1  Δ=27.05°  indep
+      NGC 3115               θ= 49.80°  n=1  Δ= 8.85°  indep
+      NGC 1068 (M77)         θ=135.50°  n=2  Δ=18.20°  indep
+      NGC 4151               θ= 78.10°  n=1  Δ=19.45°  indep
+
+Statistics:
+  Total hits:           9/15
+  Expected (isotropic): 5.0
+  Independent hits:     6/12
+
+  Binomial p-value (one-sided): 0.0308
+  → SIGNIFICANT (p<0.05)
+
+  KS statistic: 0.3562
+  KS p-value:   0.0000
+  → Survey bias detected (see OT-5 Ch.15.3)
+
+Gear Mechanism (Spin Alternation):
+  Confirmed: 3/3 correct predictions
+  Binomial p = 0.1250
+  → Need n≥6 confirmed objects for p<0.05
+
+CONCLUSION V19:
+  Shell signal not yet statistically significant with current sample.
+  Gear mechanism pattern confirmed 3/3 but not yet p<0.05.
+  Strongest falsifiable test: full NED/HyperLeda catalog KS-test (OT-6).
+  OT-28: Priority target — extend spin measurements to n=4,5,6.

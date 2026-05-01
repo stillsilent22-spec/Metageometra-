@@ -1,0 +1,15 @@
+══════════════════════════════════════════════════════════════
+OT-42: 4-Arm KS-Test Azimutale Clusterung (V21.3)
+══════════════════════════════════════════════════════════════
+N_SMBH = 97  |  Arm-Az = ['88.0', '107.7', '268.0', '287.7']
+
+KS-Test vs. gleichfoermig: D=0.3892, p=0.0000
+Objekte in +-20.0° Armfenstern: 13/97 (exp=43.1), z=-6.15sigma
+MC medianer Min-Arm-Abstand: obs=55.88°, p(MC<=obs)=1.0000
+MC N_in_arms p-Wert: 1.0000
+
+ANTI-CLUSTERING: SMBHs meiden Arm-Positionen (z=-6.2sigma)
+Ursache wahrscheinlich Survey-Bias (97-SMBH-Katalog ist nicht full-sky isotrop)
+
+Status: ANTI_CLUSTERING_SURVEY_BIAS
+══════════════════════════════════════════════════════════════

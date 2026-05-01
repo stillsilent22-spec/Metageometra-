@@ -1,0 +1,163 @@
+========================================================================
+OT-5 / OT-13 / OT-23 — HTM-Schalenwinkel-Test
+Hypothese: Objekte cluster bevorzugt bei theta = n * 58.65° vom D-Pol
+========================================================================
+Datum:     2026-04-28 04:42
+D-Pol:     l=305.0°, b=25.0°
+Schalen:   58.65°, 117.30°, 175.95°
+Toleranz:  ±5.0°
+Erwartet:  15.81% des Himmels auf Schalen (isotropisch)
+
+------------------------------------------------------------------------
+OT-5: SMBH Shell-Spektrum
+  N:              97
+  Hits (±5.0°):   20 (20.62%)
+  Erwartet:       15.81%
+  Ratio obs/exp:  1.3041
+  KS D:           0.1818
+  KS p:           0.0028  ★★  p<0.01
+
+  Shell-Breakdown:
+    theta=58.65°: 10 Treffer  (erw. 5.1)
+    theta=117.30°: 6 Treffer  (erw. 5.1)
+    theta=175.95°: 4 Treffer  (erw. 5.1)
+
+  SMBH Shell-Residuen (alle, sortiert nach delta):
+    * Sgr A*                  theta= 58.65°  delta=0.00°
+    * NGC 3489                theta= 58.97°  delta=0.32°
+    * M 32                    theta=175.35°  delta=0.60°
+    * NGC 3384                theta= 59.27°  delta=0.62°
+    * NGC 3379                theta= 59.28°  delta=0.63°
+    * M 31                    theta=175.09°  delta=0.86°
+    * NGC 404                 theta=177.28°  delta=1.33°
+    * NGC 3377                theta= 60.51°  delta=1.86°
+    * NGC 3842                theta= 60.55°  delta=1.90°
+    * M 85                    theta= 56.64°  delta=2.01°
+    * NGC 1600                theta=114.99°  delta=2.31°
+    * UGC 3789                theta=119.68°  delta=2.38°
+    * NGC 2748                theta=119.69°  delta=2.39°
+    * NGC 3608                theta= 61.08°  delta=2.43°
+    * NGC 1300                theta=114.12°  delta=3.18°
+    * NGC 4350                theta= 55.22°  delta=3.43°
+    * NGC 315                 theta=172.49°  delta=3.46°
+    * NGC 2960                theta= 62.12°  delta=3.47°
+    * NGC 4291                theta=113.40°  delta=3.90°
+    * NGC 1407                theta=112.31°  delta=4.99°
+      NGC 4751                theta=  5.07°  delta=5.07°
+      M 81                    theta=112.21°  delta=5.09°
+      NGC 1550                theta=122.44°  delta=5.14°
+      NGC 1332                theta=111.68°  delta=5.62°
+      NGC 6251                theta=123.11°  delta=5.81°
+      NGC 4459                theta= 52.35°  delta=6.30°
+      NGC 2273                theta=123.63°  delta=6.33°
+      NGC 4473                theta= 51.78°  delta=6.87°
+      NGC 5128                theta=  6.97°  delta=6.97°
+      NGC 4435                theta= 51.51°  delta=7.14°
+      NGC 4889                theta= 65.81°  delta=7.16°
+      M 84                    theta= 51.41°  delta=7.24°
+      NGC 4387                theta= 51.31°  delta=7.34°
+      NGC 4388                theta= 51.16°  delta=7.49°
+      NGC 4486B               theta= 50.83°  delta=7.82°
+      M 89                    theta= 50.74°  delta=7.91°
+      NGC 4552                theta= 50.74°  delta=7.91°
+      M 87                    theta= 50.72°  delta=7.93°
+      NGC 4371                theta= 50.25°  delta=8.40°
+      NGC 3115                theta= 49.75°  delta=8.90°
+      M 59                    theta= 49.68°  delta=8.97°
+      NGC 4621                theta= 49.68°  delta=8.97°
+      NGC 4564                theta= 49.61°  delta=9.04°
+      M 60                    theta= 49.55°  delta=9.10°
+      NGC 4649                theta= 49.55°  delta=9.10°
+      NGC 4278                theta= 67.79°  delta=9.14°
+      NGC 4762                theta= 49.10°  delta=9.55°
+      NGC 5846                theta= 48.95°  delta=9.70°
+      NGC 5845                theta= 48.91°  delta=9.74°
+      NGC 3227                theta= 68.53°  delta=9.88°
+      NGC 5813                theta= 48.32°  delta=10.33°
+      NGC 4596                theta= 48.26°  delta=10.39°
+      NGC 1052                theta=128.32°  delta=11.02°
+      NGC 4434                theta= 46.64°  delta=12.01°
+      M 49                    theta= 46.41°  delta=12.24°
+      NGC 4246                theta= 46.12°  delta=12.53°
+      NGC 4526                theta= 45.96°  delta=12.69°
+      NGC 4342                theta= 45.72°  delta=12.93°
+      NGC 6861                theta= 72.03°  delta=13.38°
+      NGC 5576                theta= 45.10°  delta=13.55°
+      NGC 4339                theta= 44.77°  delta=13.88°
+      NGC 4261                theta= 44.72°  delta=13.93°
+      NGC 7768                theta=161.84°  delta=14.11°
+      NGC 1194                theta=131.84°  delta=14.54°
+      NGC 7052                theta=132.28°  delta=14.98°
+      NGC 5252                theta= 43.26°  delta=15.39°
+      NGC 1023                theta=160.55°  delta=15.40°
+      NGC 3079                theta=100.97°  delta=16.33°
+      NGC 3245                theta= 75.46°  delta=16.81°
+      IC 1459                 theta=100.39°  delta=16.91°
+      M 77                    theta=135.49°  delta=18.19°
+      NGC 1374                theta= 98.66°  delta=18.64°
+      NGC 1399                theta= 98.13°  delta=19.17°
+      NGC 4151                theta= 78.10°  delta=19.45°
+      NGC 7457                theta=154.11°  delta=21.84°
+      NGC 7049                theta= 80.58°  delta=21.93°
+      NGC 6086                theta= 80.86°  delta=22.21°
+      NGC 1271                theta=153.31°  delta=22.64°
+      NGC 1275                theta=153.21°  delta=22.74°
+      NGC 1277                theta=153.20°  delta=22.75°
+      NGC 1281                theta=153.16°  delta=22.79°
+      NGC 3998                theta= 94.25°  delta=23.05°
+      NGC 307                 theta=140.38°  delta=23.08°
+      NGC 524                 theta=151.20°  delta=24.75°
+      NGC 3585                theta= 25.18°  delta=25.18°
+      NGC 7619                theta=142.66°  delta=25.36°
+      NGC 7626                theta=142.73°  delta=25.43°
+      NGC 5077                theta= 25.52°  delta=25.52°
+      NGC 4697                theta= 32.16°  delta=26.49°
+      M 104                   theta= 26.63°  delta=26.63°
+      NGC 821                 theta=149.20°  delta=26.75°
+      M 106                   theta= 85.65°  delta=27.00°
+      NGC 6264                theta= 85.86°  delta=27.21°
+      NGC 2778                theta= 90.06°  delta=27.24°
+      NGC 4026                theta= 89.82°  delta=27.48°
+      NGC 7332                theta=146.41°  delta=29.11°
+      Circinus                theta= 29.46°  delta=29.19°
+
+------------------------------------------------------------------------
+OT-13: Milliquas AGN/QSO
+  N:              3000
+  Hits (±5.0°):   259 (8.63%)
+  Erwartet:       15.81%
+  Ratio obs/exp:  0.5461
+  KS D:           0.1198
+  KS p:           0.0000  ★★★ p<0.001
+
+  Shell-Breakdown:
+    theta=58.65°: 146 Treffer  (erw. 158.1)
+    theta=117.30°: 113 Treffer  (erw. 158.1)
+    theta=175.95°: 0 Treffer  (erw. 158.1)
+
+
+------------------------------------------------------------------------
+OT-23: Kosmische Voids (Nadathur+2012 / Micheletti+2014)
+  N:              3435
+  Hits (±5.0°):   491 (14.29%)
+  Erwartet:       15.81%
+  Ratio obs/exp:  0.9041
+  KS D:           0.0440
+  KS p:           0.0000  ★★★ p<0.001
+
+  Shell-Breakdown:
+    theta=58.65°: 184 Treffer  (erw. 181.0)
+    theta=117.30°: 198 Treffer  (erw. 181.0)
+    theta=175.95°: 109 Treffer  (erw. 181.0)
+
+
+========================================================================
+INTERPRETATION
+========================================================================
+  OT-5: EXCESS-SIGNAL  — Ratio=1.304× (MEHR als erwartet), KS p=0.0028
+  OT-13: KEIN HTM-SIGNAL — Ratio=0.546× (WENIGER als erwartet, wahrsch. Survey-Footprint-Effekt), KS p=0.0000
+  OT-23: KEIN HTM-SIGNAL — Ratio=0.904× (WENIGER als erwartet, wahrsch. Survey-Footprint-Effekt), KS p=0.0000
+
+HINWEIS OT-13/OT-23: KS-Test signifikant wegen inhomogenem Survey-Footprint,
+  nicht wegen HTM-Signal. Korrekte Analyse benoetigt Mock-Katalog im selben Footprint.
+

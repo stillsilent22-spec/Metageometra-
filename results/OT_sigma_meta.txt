@@ -1,0 +1,94 @@
+========================================================================
+OT-Sigma_meta: Grosskreis-Suche am Himmel
+Hypothese: Sigma_meta (S3-Topologiegrenze) → Grosskreis senkrecht zu D-Pol
+========================================================================
+Datum:     2026-04-28 04:13
+Anker:     CMB Cold Spot  l=209.0°  b=-57.0°  (RA=48.75°, Dec=-19°)
+D-Pol:     l=305.0°  b=25.0°   |CS-D-Pol|=114.0°
+Grid:      3600 Pole  Toleranz=7.0°
+Strukturen:20 bekannte LSS-Anomalien + 1653 VizieR-Cluster
+
+------------------------------------------------------------------------
+SCHRITT 2+4: BESTER GROSSKREIS (hoechste Trefferrate AUF ALLEN Kandidaten)
+  Pol     l=132.14°  b=8.40°
+  Antipol l=312.14°  b=-8.40°
+  Treffer: 7/20
+  D-Pol Abstand des Pols: 34.11°  (Limit 15°)
+  Sigma_meta-kompatibel (D-Pol-senkrecht): NEIN
+
+  Strukturen auf bestem GC:
+    CMB_Quad_axis                l= 240.00  b=  63.00  d=0.4°  [CMB]
+    CMB_Asym_dir                 l= 218.00  b= -20.00  d=1.0°  [CMB]
+    Eridanus_Supervoid           l= 205.00  b= -56.50  d=2.2°  [Void]
+    Sloan_GreatWall              l= 245.00  b=  52.00  d=7.0°  [Wall]
+    Saraswati_SC                 l=  50.00  b=  -7.00  d=6.7°  [Wall]
+    VirgoCluster                 l= 284.00  b=  74.00  d=5.7°  [Cluster]
+    SDSS_nc3_est                 l= 245.00  b=  55.00  d=5.8°  [HTM]
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+D-POL-GROSSKREIS (Pol = D-Pol exakt): Cold Spot Abstand=24.0°
+  Strukturen auf D-Pol-GC (<7.0°): 4
+    El_Gordo                     d=2.1°
+    CfA2_GreatWall               d=5.1°
+    CMB_Asym_dir                 d=5.7°
+    Hercules_CrB_GW              d=6.5°
+
+------------------------------------------------------------------------
+SCHRITT 3: KS-TEST
+  Bekannte Strukturen (N=20):  D=0.2284  p=0.2161
+  VizieR Cluster (N=1653):      D=0.0438  p=0.0034
+  Cluster auf GC: 208/1653(12.6%) vs Zufall(12.2%)  Ratio=1.03
+
+------------------------------------------------------------------------
+MC p-WERT: 0.1116  (obs=7/20, N_MC=10000)
+
+------------------------------------------------------------------------
+ALLE STRUKTUREN: Abstand zum besten GC (sortiert):
+  * CMB_Quad_axis                l= 240.00  b=  63.00  d=0.4°
+  * CMB_Asym_dir                 l= 218.00  b= -20.00  d=1.0°
+  * Eridanus_Supervoid           l= 205.00  b= -56.50  d=2.2°
+  * VirgoCluster                 l= 284.00  b=  74.00  d=5.7°
+  * SDSS_nc3_est                 l= 245.00  b=  55.00  d=5.8°
+  * Saraswati_SC                 l=  50.00  b=  -7.00  d=6.7°
+  * Sloan_GreatWall              l= 245.00  b=  52.00  d=7.0°
+    Bootes_Void                  l=  57.00  b=  68.00  d=13.3°
+    DESI_Supervoid_z03           l= 242.00  b=  17.00  d=16.2°
+    CMB_Oct_axis                 l= 308.00  b=  63.00  d=18.5°
+    CMB_AxisOfEvil               l= 264.00  b=  48.00  d=19.5°
+    El_Gordo                     l= 249.00  b= -47.00  d=24.3°
+    CfA2_GreatWall               l= 130.00  b=  70.00  d=28.4°
+    Hercules_CrB_GW              l=  75.00  b=  45.00  d=28.9°
+    Shapley_Conc                 l= 312.00  b=  31.00  d=50.6°
+    Laniakea_GA                  l= 304.00  b=  29.00  d=51.8°
+    HTM_D_Pol                    l= 305.00  b=  25.00  d=55.9°
+    HTM_A_Pol                    l= 125.00  b= -25.00  d=55.9°
+    Perseus_Pisces               l= 150.00  b= -13.00  d=62.2°
+    KBC_LocalVoid                l= 312.00  b=  -4.00  d=85.6°
+
+TOP-10 GC-KANDIDATEN:
+      phi    Pol_l   Pol_b  Hits  d_D-Pol  Treffer
+    74.45   132.14    8.40     7    34.11  CMB Quad axi,CMB Asym dir,Eridanus Sup,Sloan GreatW,Saraswati SC,VirgoCluster,SDSS nc3 est
+    74.40   132.18    8.42     7    34.15  CMB Quad axi,CMB Asym dir,Eridanus Sup,Sloan GreatW,Saraswati SC,VirgoCluster,SDSS nc3 est
+    74.35   132.22    8.45     7    34.18  CMB Quad axi,CMB Asym dir,Eridanus Sup,Sloan GreatW,Saraswati SC,VirgoCluster,SDSS nc3 est
+    74.30   132.26    8.48     7    34.22  CMB Quad axi,CMB Asym dir,Eridanus Sup,Sloan GreatW,Saraswati SC,VirgoCluster,SDSS nc3 est
+    74.25   132.31    8.50     7    34.25  CMB Quad axi,CMB Asym dir,Eridanus Sup,Sloan GreatW,Saraswati SC,VirgoCluster,SDSS nc3 est
+    74.20   132.35    8.53     7    34.28  CMB Quad axi,CMB Asym dir,Eridanus Sup,Sloan GreatW,Saraswati SC,VirgoCluster,SDSS nc3 est
+    74.15   132.39    8.55     7    34.32  CMB Quad axi,CMB Asym dir,Eridanus Sup,Sloan GreatW,Saraswati SC,VirgoCluster,SDSS nc3 est
+    74.10   132.44    8.58     7    34.35  CMB Quad axi,CMB Asym dir,Eridanus Sup,Sloan GreatW,Saraswati SC,VirgoCluster,SDSS nc3 est
+    74.05   132.48    8.61     7    34.39  CMB Quad axi,CMB Asym dir,Eridanus Sup,Sloan GreatW,Saraswati SC,VirgoCluster,SDSS nc3 est
+    74.00   132.52    8.63     7    34.42  CMB Quad axi,CMB Asym dir,Eridanus Sup,Sloan GreatW,Saraswati SC,VirgoCluster,SDSS nc3 est
+
+GROSSKREIS-PUNKTE (theta=0 = Cold Spot, alle 30°):
+  theta=  0°   l= 209.0°  b= -57.0°
+  theta= 30°   l= 217.7°  b= -27.6°
+  theta= 60°   l= 222.4°  b=   2.0°
+  theta= 90°   l= 227.4°  b=  31.6°
+  theta=120°   l= 237.5°  b=  60.9°
+  theta=150°   l= 325.8°  b=  81.4°
+  theta=180°   l=  29.0°  b=  57.0°
+  theta=210°   l=  37.7°  b=  27.6°
+  theta=240°   l=  42.4°  b=  -2.0°
+  theta=270°   l=  47.4°  b= -31.6°
+  theta=300°   l=  57.5°  b= -60.9°
+  theta=330°   l= 145.8°  b= -81.4°

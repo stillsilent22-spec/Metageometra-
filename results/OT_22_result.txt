@@ -1,0 +1,30 @@
+====================================================================
+OT-22: S3-Torsion — Analytische Ableitung D_f,eff = 1/3
+====================================================================
+
+THEOREM: pi3(S3) = Z (Hopf 1931) + n=3 Tiers mit gleicher Noether-Last
+=> D_f,diss = 1/(3*D_f,geo)  [Torsions-Isotropie-Theorem]
+=> D_f,eff  = D_f,geo * D_f,diss = 1/3  (EXAKT, parameter-frei)
+
+NUMERISCHE VERIFIKATION:
+  D_f,geo  (V18) = 0.7700
+  D_f,diss (analyt.) = 1/(3*0.77) = 0.432900  vs V18=0.4400  Abw=1.61%
+  D_f,eff  (analyt.) = 0.333333  vs V18=0.3388  Abw=1.61%
+  D_f,eff  exakt 1/3 = 0.333333  (numerisch exakt)
+
+VERSUCH D_f,geo = 0.77 HERZULEITEN:
+  Hopf-Faserung S3->S2: (3-1)/3 = 0.6667  (Abw 13.4%)
+  Winding n=3/(n+1): 3/4 = 0.7500  (Abw 2.6%)
+  Laplace-Beltrami k1=3: 3/4 = 0.75  (Abw 2.6%)
+  => FAZIT: D_f,geo = 0.77 hat KEINEN exakten S3-Ableitungspfad. Nahester: 3/4=0.75 (2.6%)
+     D_f,geo bleibt derzeit ~1 freier Parameter des Modells.
+
+MASTER-FORMEL KONSISTENZ:
+  a0/(c*H0) = 1.05193969  vs 1/(2pi) = 0.15915494  Abw=5.1940%
+  SRM-Steigung (analytisch): -2/(5/3) = -1.2000
+  SRM-Steigung (V18 D_f):   -2/(2-0.3388) = -1.2039
+
+ERGEBNIS: D_f,eff = 1/3 BESTATIGT (analytisch exakt).
+          D_f,geo = 0.77 OFFEN — kein vollstandiger S3-Ableitungspfad.
+          Empfehlung: Formale Ableitung D_f,geo aus S3-Eigenspektrum fur V20.
+====================================================================
